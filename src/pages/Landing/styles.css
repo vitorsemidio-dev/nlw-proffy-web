@@ -29,3 +29,25 @@
   line-height: 4.6rem;
   margin-top: 0.8rem;
 }
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 3.2rem 0;
+}
+
+.buttons-container a {
+  width: 30rem;
+  height: 10.4rem;
+  border-radius: 0.8rem;
+  margin-right: 1.6rem;
+  font: 700 2.0rem Archivo;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: var(--color-button-text);
+  
+}
