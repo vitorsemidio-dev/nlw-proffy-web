@@ -12,6 +12,7 @@ interface Props {
 
 const PageHeader: React.FC<Props> = ({
   title,
+  children,
 }) => {
   return (
     <header className="page-header">
@@ -27,6 +28,7 @@ const PageHeader: React.FC<Props> = ({
           <strong>
             {title}
           </strong>
+          {children}
         </div>
       </header>
   )
