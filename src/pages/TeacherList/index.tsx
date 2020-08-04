@@ -2,9 +2,9 @@ import React from 'react';
 
 import PageHeader from '../../components/PageHeader';
 
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
+import TeacherItem from '../../components/TeacherItem';
 
 const TeacherList: React.FC = () => {
   return (
@@ -29,28 +29,10 @@ const TeacherList: React.FC = () => {
       </PageHeader>
 
       <main>
-        <article className="teacher-item">
-          <header>
-            <img src="https://avatars2.githubusercontent.com/u/52754546?s=460&u=beb81a6de4cfbea7677783e3ab2527e30582478d&v=4" alt="Emidio"/>
-            <div>
-              <strong>Vitor Emidio</strong>
-              <span>Matemática</span>
-            </div>
-          </header>
-          <p>
-            Amante por números e adora ensinar o que há de melhor com conhecimentos em geometria e trigonometria
-          </p>
-
-          <footer>
-            <p>
-              Preço/hora <strong>R$100,00</strong>
-            </p>
-            <button type="button">
-              <img src={whatsappIcon} alt="WhatsApp"/>
-              Entrar em contato
-            </button>
-          </footer>
-        </article>
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
       </main>
     </div>
   )
