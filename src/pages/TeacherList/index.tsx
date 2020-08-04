@@ -2,9 +2,9 @@ import React from 'react';
 
 import PageHeader from '../../components/PageHeader';
 
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
+import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
-import './styles.css'
+import './styles.css';
 
 const TeacherList: React.FC = () => {
   return (
