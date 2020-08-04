@@ -59,7 +59,7 @@
     column-gap: 16px;
 
     position: absolute;
-    bottom: -44px;
+    bottom: calc(-10%);
   }
 
   #search-teachers .input-block + .input-block {
