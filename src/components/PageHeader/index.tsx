@@ -6,7 +6,13 @@ import backIcon from '../../assets/images/icons/back.svg';
 
 import './styles.css';
 
-const PageHeader: React.FC = () => {
+interface Props {
+  title?: string;
+}
+
+const PageHeader: React.FC<Props> = ({
+  title,
+}) => {
   return (
     <header className="page-header">
         <div className="top-bar-container">
@@ -19,7 +25,7 @@ const PageHeader: React.FC = () => {
 
         <div className="header-content">
           <strong>
-            Estes são os proffys disponíveis
+            {title}
           </strong>
         </div>
       </header>

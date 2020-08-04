@@ -7,7 +7,7 @@ import './styles.css'
 const TeacherList: React.FC = () => {
   return (
     <div id="page-teacher-list" className="container">
-      <PageHeader />
+      <PageHeader title="Estes são os proffys disponíveis" />
     </div>
   )
 }
