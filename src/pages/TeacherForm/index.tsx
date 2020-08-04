@@ -14,12 +14,12 @@ const TeacherForm: React.FC = () => {
           </div>
 
           <div className="input-block">
-            <label htmlFor="week-day">Matéria</label>
+            <label htmlFor="week-day">Dia da Semana</label>
             <input type="text" id="week-day"/>
           </div>
 
           <div className="input-block">
-            <label htmlFor="time">Matéria</label>
+            <label htmlFor="time">Hora</label>
             <input type="text" id="time"/>
           </div>
         </form>
