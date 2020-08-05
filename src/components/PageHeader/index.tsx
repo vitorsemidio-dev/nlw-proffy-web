@@ -7,12 +7,14 @@ import backIcon from '../../assets/images/icons/back.svg';
 import './styles.css';
 
 interface Props {
-  title?: string;
+  title: string;
+  description?: string;
 }
 
 const PageHeader: React.FC<Props> = ({
   title,
   children,
+  description,
 }) => {
   return (
     <header className="page-header">
@@ -28,6 +30,11 @@ const PageHeader: React.FC<Props> = ({
           <strong>
             {title}
           </strong>
+
+          { description && (
+            <p>{description}</p>
+          ) }
+
           {children}
         </div>
       </header>
