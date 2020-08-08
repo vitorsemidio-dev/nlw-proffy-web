@@ -101,7 +101,7 @@ const TeacherList: React.FC = () => {
 
       <main>
         {teachers.map(teacher => (
-          <TeacherItem key={teacher.user_id} />
+          <TeacherItem key={String(teacher.id)} teacher={teacher} />
         ))}
       </main>
     </div>
