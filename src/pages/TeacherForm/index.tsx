@@ -16,11 +16,7 @@ interface Schedule {
 }
 
 const TeacherForm: React.FC = () => {
-  const [scheduleItems, setScheduleItems] = useState<Schedule[]>([
-    {week_day: 1, from: '8:00 AM', to: '16:00 PM'},
-    {week_day: 2, from: '9:00 AM', to: '18:00 PM'},
-    {week_day: 4, from: '6:00 AM', to: '12:00 PM'}
-  ]);
+  const [scheduleItems, setScheduleItems] = useState<Schedule[]>([]);
 
   function handleAddScheduleItem() {
     setScheduleItems([
