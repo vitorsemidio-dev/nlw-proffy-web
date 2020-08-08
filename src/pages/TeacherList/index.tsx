@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
 
 import PageHeader from '../../components/PageHeader';
 import TeacherItem from '../../components/TeacherItem';
@@ -8,14 +8,26 @@ import Select from '../../components/Select';
 import './styles.css';
 
 const TeacherList: React.FC = () => {
+  const [subject, setSubject] = useState('');
+  const [week_day, setWeekDay] = useState('');
+  const [time, setTime] = useState('');
+
+  function searchTeachers(event: FormEvent) {
+    event.preventDefault();
+
+    console.log('haha');
+  }
+
   return (
     <div id="page-teacher-list" className="container">
       <PageHeader title="Estes são os proffys disponíveis" >
-        <form id="search-teachers">
+        <form id="search-teachers" onSubmit={searchTeachers}>
           <Select 
             name="subject"
             label="Matéria"
             optionTextDefault="Selecione uma matéria"
+            value={subject}
+            onChange={(e) => { setSubject(e.target.value) }}
             options={[
               { value: 'Artes', label: 'Artes'},
               { value: 'Biologia', label: 'Biologia'},
@@ -34,6 +46,8 @@ const TeacherList: React.FC = () => {
           <Select
             name="week_day"
             label="Dia da semana"
+            value={week_day}
+            onChange={(e) => { setWeekDay(e.target.value) }}
             optionTextDefault="Selecione um dia"
             options={[
               { value: '0', label: 'Domingo' },
@@ -46,7 +60,17 @@ const TeacherList: React.FC = () => {
             ]}
           />
 
-          <Input type="time" label="Hora" name="time"/>
+          <Input 
+            type="time"
+            label="Hora"
+            name="time"
+            value={time}
+            onChange={(e) => { setTime(e.target.value) }}
+          />
+
+          <button type="submit">
+            Buscar
+          </button>
 
         </form>
       </PageHeader>
