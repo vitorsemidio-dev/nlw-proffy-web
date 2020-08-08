@@ -1,5 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 
+import api from '../../services/api';
+
 import PageHeader from '../../components/PageHeader';
 import TeacherItem from '../../components/TeacherItem';
 import Input from '../../components/Input';
@@ -7,15 +9,37 @@ import Select from '../../components/Select';
 
 import './styles.css';
 
+interface Teacher {
+  avatar: string;
+  bio: string;
+  cost: number;
+  id: number;
+  name: string;
+  subject: string;
+  user_id: number;
+  whatsapp: string;
+}
+
 const TeacherList: React.FC = () => {
+  const [teachers, setTeachers] = useState<Teacher[]>([]);
+
   const [subject, setSubject] = useState('');
   const [week_day, setWeekDay] = useState('');
   const [time, setTime] = useState('');
 
-  function searchTeachers(event: FormEvent) {
+  async function searchTeachers(event: FormEvent) {
     event.preventDefault();
 
-    console.log('haha');
+    const response = await api.get<Teacher[]>('/classes', {
+      params: {
+        subject,
+        week_day,
+        time,
+      }
+    });
+
+    console.log(response.data);
+    setTeachers(response.data);
   }
 
   return (
@@ -76,10 +100,9 @@ const TeacherList: React.FC = () => {
       </PageHeader>
 
       <main>
-        <TeacherItem />
-        <TeacherItem />
-        <TeacherItem />
-        <TeacherItem />
+        {teachers.map(teacher => (
+          <TeacherItem key={teacher.user_id} />
+        ))}
       </main>
     </div>
   )
