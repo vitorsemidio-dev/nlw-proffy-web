@@ -8,7 +8,7 @@ const TeacherItem: React.FC = () => {
   return (
     <article className="teacher-item">
       <header>
-        <img src="https://avatars2.githubusercontent.com/u/52754546?s=460&u=beb81a6de4cfbea7677783e3ab2527e30582478d&v=4" alt="Emidio"/>
+        <img src="https://thispersondoesnotexist.com/image" alt="Emidio"/>
         <div>
           <strong>Vitor Emidio</strong>
           <span>Matemática</span>
