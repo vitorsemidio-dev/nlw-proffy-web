@@ -5,26 +5,19 @@ import PageHeader from '../../components/PageHeader';
 
 import './styles.css';
 import TeacherItem from '../../components/TeacherItem';
+import Input from '../../components/Input';
 
 const TeacherList: React.FC = () => {
   return (
     <div id="page-teacher-list" className="container">
       <PageHeader title="Estes são os proffys disponíveis" >
         <form id="search-teachers">
-          <div className="input-block">
-            <label htmlFor="subject">Matéria</label>
-            <input type="text" id="subject"/>
-          </div>
+          <Input label="Matéria" name="subject"/>
 
-          <div className="input-block">
-            <label htmlFor="week-day">Dia da Semana</label>
-            <input type="text" id="week-day"/>
-          </div>
+          <Input label="Dia da Semana" name="week-day"/>
 
-          <div className="input-block">
-            <label htmlFor="time">Hora</label>
-            <input type="text" id="time"/>
-          </div>
+          <Input label="Hora" name="time"/>
+          
         </form>
       </PageHeader>
 
