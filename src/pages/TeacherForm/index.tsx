@@ -29,7 +29,7 @@ const TeacherForm: React.FC = () => {
   ]);
 
   function setScheduleItemValue(position: number, field: string, value: string) {
-    const newArray = scheduleItems.map((scheduleItem, index) => {
+    const scheduleUpdated = scheduleItems.map((scheduleItem, index) => {
       if (index === position) {
         return {
           ...scheduleItem, [field]: value,
@@ -38,9 +38,7 @@ const TeacherForm: React.FC = () => {
       return scheduleItem;
     });
 
-    setScheduleItems(newArray)
-
-    console.log(newArray);
+    setScheduleItems(scheduleUpdated)
   }
 
   function handleAddScheduleItem() {
@@ -106,6 +104,7 @@ const TeacherForm: React.FC = () => {
               name="subject"
               label="Matéria"
               optionTextDefault="Selecione uma matéria"
+              value={subject}
               options={[
                 { value: 'Artes', label: 'Artes'},
                 { value: 'Biologia', label: 'Biologia'},
