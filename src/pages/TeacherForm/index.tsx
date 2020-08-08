@@ -10,6 +10,7 @@ import Select from '../../components/Select';
 import warningIcon from '../../assets/images/icons/warning.svg';
 
 import './styles.css';
+import { useHistory } from 'react-router-dom';
 
 interface Schedule {
   week_day: number,
@@ -18,6 +19,8 @@ interface Schedule {
 }
 
 const TeacherForm: React.FC = () => {
+  const history = useHistory();
+
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
@@ -64,7 +67,9 @@ const TeacherForm: React.FC = () => {
       cost: Number(cost),
       schedule: scheduleItems,
     }).then(() => {
-      alert('Cadastro criado com sucesso!')
+      alert('Cadastro criado com sucesso!');
+      
+      history.push('/');
     }).catch(() => {
       alert('Erro no cadastro!');
     })
