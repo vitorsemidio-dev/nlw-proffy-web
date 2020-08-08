@@ -39,15 +39,15 @@ const TeacherForm: React.FC = () => {
             options={[
               { value: 'Artes', label: 'Artes'},
               { value: 'Biologia', label: 'Biologia'},
-              { value: 'Matemática', label: 'Matemática'},
-              { value: 'Química', label: 'Química'},
-              { value: 'Português', label: 'Português'},
               { value: 'Educação Física', label: 'Educação Física'},
-              { value: 'História', label: 'História'},
-              { value: 'Sociologia', label: 'Sociologia'},
               { value: 'Filosofia', label: 'Filosofia'},
               { value: 'Física', label: 'Física'},
               { value: 'Informática', label: 'Informática'},
+              { value: 'História', label: 'História'},
+              { value: 'Matemática', label: 'Matemática'},
+              { value: 'Português', label: 'Português'},
+              { value: 'Química', label: 'Química'},
+              { value: 'Sociologia', label: 'Sociologia'},
             ]}
           />
 

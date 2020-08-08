@@ -10,7 +10,7 @@ interface Subject {
 interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
   label: string;
   name: string;
-  options: Subject[]
+  options: Subject[];
 }
 
 const Select: React.FC<Props> = ({
@@ -26,9 +26,12 @@ const Select: React.FC<Props> = ({
         {label}
       </label>
       <select id={name} {...rest}>
-        {options.map(option => (
-          <option key={option.value} value={option.value}>
-            {option.label}
+        <option value="" disabled selected hidden>
+          Selecione uma opção
+        </option>
+        {options.map(({ value, label }) => (
+          <option key={value} value={value}>
+            {label}
           </option>
         ))}
       </select>
