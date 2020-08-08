@@ -2,10 +2,6 @@
   position: relative;
 }
 
-.input-block + .input-block {
-  margin-top: 1.4rem;
-}
-
 .input-block label {
   font-size: 1.4rem;
   color: var(--color-text-complement);
@@ -32,10 +28,4 @@
   left: 1.6rem;
   right: 1.6rem;
   bottom: 0;
-}
-
-@media (min-width: 700px) {
-  .input-block + .input-block {
-    margin-top: 0;
-  }
 }
