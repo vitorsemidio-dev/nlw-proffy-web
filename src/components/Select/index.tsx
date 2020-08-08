@@ -11,12 +11,14 @@ interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
   label: string;
   name: string;
   options: Subject[];
+  optionTextDefault?: string;
 }
 
 const Select: React.FC<Props> = ({
   label,
   name,
   options,
+  optionTextDefault = 'Selecione uma opção',
   children,
   ...rest
 }) => {
@@ -27,7 +29,7 @@ const Select: React.FC<Props> = ({
       </label>
       <select id={name} {...rest}>
         <option value="" disabled selected hidden>
-          Selecione uma opção
+          {optionTextDefault}
         </option>
         {options.map(({ value, label }) => (
           <option key={value} value={value}>

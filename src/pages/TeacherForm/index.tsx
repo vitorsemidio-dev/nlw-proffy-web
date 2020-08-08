@@ -36,6 +36,7 @@ const TeacherForm: React.FC = () => {
           <Select 
             name="subject"
             label="Matéria"
+            optionTextDefault="Selecione uma matéria"
             options={[
               { value: 'Artes', label: 'Artes'},
               { value: 'Biologia', label: 'Biologia'},
