@@ -27,12 +27,12 @@ const Select: React.FC<Props> = ({
       <label htmlFor={name}>
         {label}
       </label>
-      <select id={name} defaultValue="" {...rest}>
+      <select id={name} value="" {...rest}>
         <option value="" disabled hidden>
           {optionTextDefault}
         </option>
         {options.map(({ value, label }) => (
-          <option key={value} value={value}>
+          <option key={`${value}`} value={value}>
             {label}
           </option>
         ))}

@@ -24,7 +24,24 @@ const TeacherForm: React.FC = () => {
   const [subject, setSubject] = useState('');
   const [cost, setCost] = useState('');
 
-  const [scheduleItems, setScheduleItems] = useState<Schedule[]>([]);
+  const [scheduleItems, setScheduleItems] = useState<Schedule[]>([
+    { week_day: 0, from: '', to: '' },
+  ]);
+
+  function setScheduleItemValue(position: number, field: string, value: string) {
+    const newArray = scheduleItems.map((scheduleItem, index) => {
+      if (index === position) {
+        return {
+          ...scheduleItem, [field]: value,
+        }
+      }
+      return scheduleItem;
+    });
+
+    setScheduleItems(newArray)
+
+    console.log(newArray);
+  }
 
   function handleAddScheduleItem() {
     setScheduleItems([
@@ -38,7 +55,7 @@ const TeacherForm: React.FC = () => {
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
     console.log({
-      name, avatar, whatsapp, bio, subject, cost,
+      name, avatar, whatsapp, bio, subject, cost, scheduleItems,
     })
   }
   return (
@@ -121,12 +138,14 @@ const TeacherForm: React.FC = () => {
               </button>
             </legend>
 
-            {scheduleItems.map(scheduleItem => (
+            {scheduleItems.map((scheduleItem, index) => (
               <div key={String(scheduleItem.week_day)} className="schedule-item">
                 <Select
-                  name="week-day"
+                  name="week_day"
                   label="Dia da semana"
                   optionTextDefault="Selecione um dia"
+                  value={scheduleItem.week_day}
+                  onChange={e => setScheduleItemValue(index, 'week_day', e.target.value)}
                   options={[
                     { value: '0', label: 'Domingo' },
                     { value: '1', label: 'Segunda-feira' },
@@ -138,9 +157,21 @@ const TeacherForm: React.FC = () => {
                   ]}
                 />
 
-                <Input name="from" label="Das" type="time" />
+                <Input
+                  name="from"
+                  label="Das"
+                  type="time"
+                  value={scheduleItem.from}
+                  onChange={e => setScheduleItemValue(index, 'from', e.target.value)}
+                />
                 
-                <Input name="to" label="Até" type="time" />
+                <Input
+                  name="to"
+                  label="Até"
+                  type="time"
+                  value={scheduleItem.to}
+                  onChange={e => setScheduleItemValue(index, 'to', e.target.value)}
+                />
               </div>
             ))}
           </fieldset>

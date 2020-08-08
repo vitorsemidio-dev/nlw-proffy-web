@@ -32,7 +32,7 @@ const TeacherList: React.FC = () => {
           />
 
           <Select
-            name="week-day"
+            name="week_day"
             label="Dia da semana"
             optionTextDefault="Selecione um dia"
             options={[
