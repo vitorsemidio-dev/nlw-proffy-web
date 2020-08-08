@@ -1,5 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 
+import api from '../../services/api';
+
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
@@ -52,8 +54,19 @@ const TeacherForm: React.FC = () => {
 
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
-    console.log({
-      name, avatar, whatsapp, bio, subject, cost, scheduleItems,
+
+    api.post('/classes', {
+      name,
+      avatar,
+      whatsapp,
+      bio,
+      subject,
+      cost: Number(cost),
+      schedule: scheduleItems,
+    }).then(() => {
+      alert('Cadastro criado com sucesso!')
+    }).catch(() => {
+      alert('Erro no cadastro!');
     })
   }
   return (
