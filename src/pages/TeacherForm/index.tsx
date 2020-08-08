@@ -6,6 +6,7 @@ import Input from '../../components/Input';
 import warningIcon from '../../assets/images/icons/warning.svg';
 
 import './styles.css';
+import Textarea from '../../components/Textarea';
 
 const TeacherForm: React.FC = () => {
   return (
@@ -32,6 +33,8 @@ const TeacherForm: React.FC = () => {
           <Input name="cost" label="Custo da sua hora por aula" />
 
           <Input name="subject" label="Matéria" />
+
+          <Textarea label="Biografia" name="bio" />
 
         </fieldset>
 
