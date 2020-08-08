@@ -16,6 +16,11 @@ interface Schedule {
 }
 
 const TeacherForm: React.FC = () => {
+  const [name, setName] = useState('');
+  const [avatar, setAvatar] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [bio, setBio] = useState('');
+
   const [scheduleItems, setScheduleItems] = useState<Schedule[]>([]);
 
   function handleAddScheduleItem() {
@@ -36,13 +41,33 @@ const TeacherForm: React.FC = () => {
         <fieldset>
           <legend>Seus dados</legend>
 
-          <Input name="name" label="Nome completo" />
+          <Input 
+            name="name"
+            label="Nome completo"
+            value={name}
+            onChange={(e) => { setName(e.target.value) }}
+          />
 
-          <Input name="avatar" label="Avatar" />
+          <Input 
+            name="avatar"
+            label="Avatar"
+            value={avatar}
+            onChange={(e) => { setAvatar(e.target.value) }}
+          />
           
-          <Input name="whatsapp" label="WhastApp" />
+          <Input 
+            name="whatsapp"
+            label="WhastApp"
+            value={whatsapp}
+            onChange={(e) => { setWhatsapp(e.target.value) }}
+          />
 
-          <Textarea label="Biografia" name="bio" />
+          <Textarea 
+            label="Biografia"
+            name="bio"
+            value={bio}
+            onChange={(e) => { setBio(e.target.value) }}
+          />
           
         </fieldset>
 
