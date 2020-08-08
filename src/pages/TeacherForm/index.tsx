@@ -2,11 +2,12 @@ import React from 'react';
 
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
+import Textarea from '../../components/Textarea';
+import Select from '../../components/Select';
 
 import warningIcon from '../../assets/images/icons/warning.svg';
 
 import './styles.css';
-import Textarea from '../../components/Textarea';
 
 const TeacherForm: React.FC = () => {
   return (
@@ -24,18 +25,18 @@ const TeacherForm: React.FC = () => {
           <Input name="avatar" label="Avatar" />
           
           <Input name="whatsapp" label="WhastApp" />
+
+          <Textarea label="Biografia" name="bio" />
           
         </fieldset>
 
         <fieldset>
           <legend>Sobre a aula</legend>
 
+          <Select name="subject" label="Matéria" />
+
           <Input name="cost" label="Custo da sua hora por aula" />
-
-          <Input name="subject" label="Matéria" />
-
-          <Textarea label="Biografia" name="bio" />
-
+          
         </fieldset>
 
         <footer>
