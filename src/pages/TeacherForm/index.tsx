@@ -33,7 +33,23 @@ const TeacherForm: React.FC = () => {
         <fieldset>
           <legend>Sobre a aula</legend>
 
-          <Select name="subject" label="Matéria" />
+          <Select 
+            name="subject"
+            label="Matéria"
+            options={[
+              { value: 'Artes', label: 'Artes'},
+              { value: 'Biologia', label: 'Biologia'},
+              { value: 'Matemática', label: 'Matemática'},
+              { value: 'Química', label: 'Química'},
+              { value: 'Português', label: 'Português'},
+              { value: 'Educação Física', label: 'Educação Física'},
+              { value: 'História', label: 'História'},
+              { value: 'Sociologia', label: 'Sociologia'},
+              { value: 'Filosofia', label: 'Filosofia'},
+              { value: 'Física', label: 'Física'},
+              { value: 'Informática', label: 'Informática'},
+            ]}
+          />
 
           <Input name="cost" label="Custo da sua hora por aula" />
           
