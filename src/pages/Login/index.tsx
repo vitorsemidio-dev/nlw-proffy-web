@@ -43,11 +43,15 @@ const Login: React.FC = () => {
           }}
           label="E-mail"
           fieldId="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <InputPassword
           label="Senha"
           fieldId="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           type="password"
           inputStyle={{
             borderBottomRightRadius: 8,

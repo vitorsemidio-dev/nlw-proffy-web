@@ -1,11 +1,12 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, InputHTMLAttributes } from 'react';
 
 import { Container } from './styles';
 
-interface Props {
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
   fieldId: string;
   label: string;
   type?: string;
+  value?: string;
   inputStyle?: any;
 }
 
@@ -13,7 +14,9 @@ const InputPassword: React.FC<Props> = ({
   fieldId,
   label,
   inputStyle = {},
+  value,
   type = 'text',
+  ...rest
 }) => {
   const [fieldValue, setFieldValue] = useState('');
   const [isFilled, setIsFilled] = useState(false);
@@ -23,8 +26,9 @@ const InputPassword: React.FC<Props> = ({
     setIsFocused(false);
     console.log('handleInputBlur');
 
-    setIsFilled(!!fieldValue);
-  }, [fieldValue]);
+    console.log(value);
+    setIsFilled(!!value);
+  }, [value]);
 
   const handleInputFocus = useCallback(() => {
     setIsFocused(true);
@@ -35,12 +39,11 @@ const InputPassword: React.FC<Props> = ({
       <label htmlFor={fieldId}>{label}</label>
       <input
         style={inputStyle}
-        value={fieldValue}
-        onChange={(e) => setFieldValue(e.target.value)}
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         type={type}
         id={fieldId}
+        {...rest}
       />
     </Container>
   );
