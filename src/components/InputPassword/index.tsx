@@ -2,10 +2,16 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const InputPassword: React.FC = () => {
+interface Props {
+  fieldId: string;
+  label: string;
+}
+
+const InputPassword: React.FC<Props> = ({ fieldId, label }) => {
   return (
     <Container>
-      <h1>InputPassword</h1>
+      <label htmlFor={fieldId}>{label}</label>
+      <input type="password" id={fieldId} />
     </Container>
   );
 };
