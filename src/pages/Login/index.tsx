@@ -6,11 +6,12 @@ import InputPassword from '../../components/InputPassword';
 import landing from '../../assets/images/landing.svg';
 import success from '../../assets/images/success-background.svg';
 
-import { Container, FormContainer, FormFooter } from './styles';
+import { Container, FormContainer, FormFooter, InputCheckbox } from './styles';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
 
   const name = 'name';
   const label = 'label';
@@ -49,7 +50,16 @@ const Login: React.FC = () => {
         />
 
         <FormFooter>
-          <input type="checkbox" name="Lembrar-me" id="remeber-me" />
+          <InputCheckbox htmlFor="remeber-me">
+            <input
+              checked={rememberMe}
+              onChange={(_e) => setRememberMe(!rememberMe)}
+              type="checkbox"
+              name="Lembrar-me"
+              id="remeber-me"
+            />
+            Lembrar-me
+          </InputCheckbox>
           <a href="/">Esqueci minha senha</a>
         </FormFooter>
 

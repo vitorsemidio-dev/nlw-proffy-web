@@ -35,6 +35,7 @@ export const FormContainer = styled.form`
     justify-content: center;
     text-decoration: none;
     transition: background-color 0.2s;
+    margin-top: 4rem;
   }
 `;
 
@@ -42,4 +43,12 @@ export const FormFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2.4rem;
+`;
+
+export const InputCheckbox = styled.label`
+  vertical-align: middle;
+  input {
+    margin-right: 1rem;
+  }
 `;
