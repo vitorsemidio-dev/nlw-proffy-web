@@ -3,7 +3,7 @@ import React, { useCallback, FormEvent } from 'react';
 import landing from '../../assets/images/landing.svg';
 import success from '../../assets/images/success-background.svg';
 
-import { Container } from './styles';
+import { Container, FormContainer, FormFooter } from './styles';
 
 const Login: React.FC = () => {
   const handleSubmit = useCallback((eventSumit: FormEvent) => {
@@ -15,19 +15,18 @@ const Login: React.FC = () => {
     <Container>
       <h1>Fazer login</h1>
 
-      <form onSubmit={handleSubmit}>
-        <div className="inputs-form">
-          <input type="email" id="email" />
-          <input type="password" id="password" />
-        </div>
+      <FormContainer onSubmit={handleSubmit}>
+        <input type="email" id="email" />
 
-        <div className="footer">
+        <input type="password" id="password" />
+
+        <FormFooter>
           <input type="checkbox" name="Lembrar-me" id="remeber-me" />
           <a href="/">Esqueci minha senha</a>
-        </div>
+        </FormFooter>
 
         <button type="submit">Entrar</button>
-      </form>
+      </FormContainer>
     </Container>
   );
 };
