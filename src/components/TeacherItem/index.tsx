@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import api from '../../services/api';
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
@@ -19,11 +19,11 @@ interface Props {
 }
 
 const TeacherItem: React.FC<Props> = ({ teacher }) => {
-  function addNewConnection() {
+  const addNewConnection = useCallback(() => {
     api.post('/connections', {
       user_id: teacher.id,
     });
-  }
+  }, [teacher.id]);
 
   return (
     <article className="teacher-item">
