@@ -4,8 +4,8 @@ import Routes from './routes';
 
 import './assets/styles/global.css';
 
-function App() {
+const App: React.FC = () => {
   return <Routes />;
-}
+};
 
 export default App;
