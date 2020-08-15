@@ -11,6 +11,9 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const name = 'name';
+  const label = 'label';
+
   const handleSubmit = useCallback(
     (eventSumit: FormEvent) => {
       eventSumit.preventDefault();
@@ -42,6 +45,11 @@ const Login: React.FC = () => {
             setPassword(e.target.value);
           }}
         />
+
+        <div className="input-block">
+          <label htmlFor="name">{label}</label>
+          <input type="text" id="name" />
+        </div>
 
         <FormFooter>
           <input type="checkbox" name="Lembrar-me" id="remeber-me" />
