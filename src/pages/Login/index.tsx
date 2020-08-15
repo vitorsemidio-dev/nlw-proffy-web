@@ -1,5 +1,7 @@
 import React, { useCallback, FormEvent, useState } from 'react';
 
+import Input from '../../components/Input';
+
 import landing from '../../assets/images/landing.svg';
 import success from '../../assets/images/success-background.svg';
 
@@ -23,18 +25,22 @@ const Login: React.FC = () => {
       <h1>Fazer login</h1>
 
       <FormContainer onSubmit={handleSubmit}>
-        <input
+        <Input
+          label="E-mail"
+          name="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          id="email"
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
         />
 
-        <input
+        <Input
+          label="Senha"
+          name="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          id="password"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
         />
 
         <FormFooter>
