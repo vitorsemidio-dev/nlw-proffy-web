@@ -19,13 +19,9 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
 
-  const name = 'name';
-  const label = 'label';
-
   const handleSubmit = useCallback(
     (eventSumit: FormEvent) => {
       eventSumit.preventDefault();
-      console.log('submit');
       console.log(email, password);
     },
     [email, password],

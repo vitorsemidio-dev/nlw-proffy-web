@@ -6,7 +6,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   fieldId: string;
   label: string;
   type?: string;
-  value?: string;
+  value: string;
   inputStyle?: any;
 }
 
@@ -18,21 +18,17 @@ const InputPassword: React.FC<Props> = ({
   type = 'text',
   ...rest
 }) => {
-  const [fieldValue, setFieldValue] = useState('');
+  // const [fieldValue, setFieldValue] = useState('');
   const [isFilled, setIsFilled] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
 
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
-    console.log('handleInputBlur');
-
-    console.log(value);
     setIsFilled(!!value);
   }, [value]);
 
   const handleInputFocus = useCallback(() => {
     setIsFocused(true);
-    console.log('handleInputFocus');
   }, []);
   return (
     <Container isFilled={isFilled} isFocused={isFocused}>
