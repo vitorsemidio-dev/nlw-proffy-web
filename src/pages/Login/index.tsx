@@ -6,7 +6,13 @@ import InputPassword from '../../components/InputPassword';
 import landing from '../../assets/images/landing.svg';
 import success from '../../assets/images/success-background.svg';
 
-import { Container, FormContainer, FormFooter, InputCheckbox } from './styles';
+import {
+  Container,
+  FormContainer,
+  FormFooter,
+  InputCheckbox,
+  ForgotPassword,
+} from './styles';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -60,7 +66,7 @@ const Login: React.FC = () => {
             />
             Lembrar-me
           </InputCheckbox>
-          <a href="/">Esqueci minha senha</a>
+          <ForgotPassword href="/">Esqueci minha senha</ForgotPassword>
         </FormFooter>
 
         <button type="submit">Entrar</button>

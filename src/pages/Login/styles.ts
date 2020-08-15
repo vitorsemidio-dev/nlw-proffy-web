@@ -52,3 +52,12 @@ export const InputCheckbox = styled.label`
     margin-right: 1rem;
   }
 `;
+
+export const ForgotPassword = styled.a`
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-text-base);
+  &:hover {
+    color: var(--color-text-complement);
+  }
+`;
