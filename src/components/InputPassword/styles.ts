@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 interface ContainerProps {
   isFilled: boolean;
   isFocused: boolean;
-  borderRadius?: 'bottom' | 'top' | undefined;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -63,24 +62,4 @@ export const Container = styled.div<ContainerProps>`
         /* transform: scale(0.6) translateY(1.2rem); */
       }
     `}
-
-    ${(props) =>
-      props.borderRadius === 'bottom' &&
-      css`
-        input {
-          border-bottom-left-radius: 0.8rem;
-          border-bottom-right-radius: 0.8rem;
-        }
-      `}
-      ;
-
-    ${(props) =>
-      props.borderRadius === 'top' &&
-      css`
-        input {
-          border-top-left-radius: 0.8rem;
-          border-top-right-radius: 0.8rem;
-        }
-      `}
-      ;
 `;

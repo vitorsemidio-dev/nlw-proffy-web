@@ -29,11 +29,25 @@ const Login: React.FC = () => {
       <h1>Fazer login</h1>
 
       <FormContainer onSubmit={handleSubmit}>
-        <InputPassword first label="Campo 1" fieldId="id1" />
+        <InputPassword
+          containerStyle={{
+            borderTopRightRadius: 8,
+            borderTopLeftRadius: 8,
+          }}
+          label="Campo 1"
+          fieldId="id1"
+        />
 
         <InputPassword label="Campo 2" fieldId="id2" />
 
-        <InputPassword last label="Campo 3" fieldId="id3" />
+        <InputPassword
+          containerStyle={{
+            borderBottomRightRadius: 8,
+            borderBottomLeftRadius: 8,
+          }}
+          label="Campo 3"
+          fieldId="id3"
+        />
 
         <Input
           label="E-mail"
@@ -52,6 +66,15 @@ const Login: React.FC = () => {
             setPassword(e.target.value);
           }}
         />
+
+        <div
+          style={{
+            width: 50,
+            height: 50,
+          }}
+        >
+          haha
+        </div>
 
         <div className="input-block">
           <label htmlFor="name">{label}</label>
