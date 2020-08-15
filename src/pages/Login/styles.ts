@@ -7,7 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
 
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    font-size: 3.6rem;
   }
 `;
 
@@ -24,6 +25,7 @@ export const FormContainer = styled.form`
     width: 100%;
     height: 5.6rem;
     background-color: var(--color-secondary);
+    color: var(--color-button-text);
     border: 0;
     border-radius: 0.8rem;
     cursor: pointer;
