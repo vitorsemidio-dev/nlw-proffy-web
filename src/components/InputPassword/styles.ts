@@ -39,8 +39,11 @@ export const Container = styled.div<ContainerProps>`
     props.isFocused &&
     css`
       label {
+        top: 0;
         color: #ff9000;
-        border: 2px solid #ff9000;
+        transform: scale(0.6);
+        /* transform: scale(0.6) translateY(1.2rem); */
+        /* border: 2px solid #ff9000; */
       }
     `}
 
@@ -48,7 +51,10 @@ export const Container = styled.div<ContainerProps>`
     props.isFilled &&
     css`
       label {
-        color: #ff9000;
+        top: 0;
+        /* color: #ff9000; */
+        transform: scale(0.6);
+        /* transform: scale(0.6) translateY(1.2rem); */
       }
     `}
 `;
