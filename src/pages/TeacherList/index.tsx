@@ -46,7 +46,7 @@ const TeacherList: React.FC = () => {
     <div id="page-teacher-list" className="container">
       <PageHeader title="Estes são os proffys disponíveis" >
         <form id="search-teachers" onSubmit={searchTeachers}>
-          <Select 
+          <Select
             name="subject"
             label="Matéria"
             optionTextDefault="Selecione uma matéria"
@@ -84,7 +84,7 @@ const TeacherList: React.FC = () => {
             ]}
           />
 
-          <Input 
+          <Input
             type="time"
             label="Hora"
             name="time"
