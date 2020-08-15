@@ -11,34 +11,26 @@ interface Props {
   description?: string;
 }
 
-const PageHeader: React.FC<Props> = ({
-  title,
-  children,
-  description,
-}) => {
+const PageHeader: React.FC<Props> = ({ title, children, description }) => {
   return (
     <header className="page-header">
-        <div className="top-bar-container">
-          <Link to="/">
-            <img src={backIcon} alt="Voltar"/>
-          </Link>
+      <div className="top-bar-container">
+        <Link to="/">
+          <img src={backIcon} alt="Voltar" />
+        </Link>
 
-          <img src={logoImg} alt="Proffy"/>
-        </div>
+        <img src={logoImg} alt="Proffy" />
+      </div>
 
-        <div className="header-content">
-          <strong>
-            {title}
-          </strong>
+      <div className="header-content">
+        <strong>{title}</strong>
 
-          { description && (
-            <p>{description}</p>
-          ) }
+        {description && <p>{description}</p>}
 
-          {children}
-        </div>
-      </header>
-  )
-}
+        {children}
+      </div>
+    </header>
+  );
+};
 
 export default PageHeader;

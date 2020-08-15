@@ -24,9 +24,7 @@ const Select: React.FC<Props> = ({
 }) => {
   return (
     <div className="select-block">
-      <label htmlFor={name}>
-        {label}
-      </label>
+      <label htmlFor={name}>{label}</label>
       <select id={name} value="" {...rest}>
         <option value="" disabled hidden>
           {optionTextDefault}
@@ -38,7 +36,7 @@ const Select: React.FC<Props> = ({
         ))}
       </select>
     </div>
-  )
-}
+  );
+};
 
 export default Select;

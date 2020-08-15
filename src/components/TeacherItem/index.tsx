@@ -15,47 +15,43 @@ interface Props {
     subject: string;
     user_id: number;
     whatsapp: string;
-  }
+  };
 }
 
-const TeacherItem: React.FC<Props> = ({
-  teacher
-}) => {
+const TeacherItem: React.FC<Props> = ({ teacher }) => {
   function addNewConnection() {
     api.post('/connections', {
-      user_id: teacher.id
-    })
+      user_id: teacher.id,
+    });
   }
 
   return (
     <article className="teacher-item">
       <header>
-        <img src={teacher.avatar} alt={teacher.name}/>
+        <img src={teacher.avatar} alt={teacher.name} />
         <div>
           <strong>{teacher.name}</strong>
           <span>{teacher.subject}</span>
         </div>
       </header>
-      <p>
-        {teacher.bio}
-      </p>
+      <p>{teacher.bio}</p>
 
       <footer>
         <p>
           Preço/hora <strong>R${teacher.cost}</strong>
         </p>
         <a
-          href={`https://wa.me/${teacher.whatsapp}`} 
+          href={`https://wa.me/${teacher.whatsapp}`}
           target="_blank"
           rel="noopener noreferrer"
           onClick={addNewConnection}
-          >
-          <img src={whatsappIcon} alt="WhatsApp"/>
+        >
+          <img src={whatsappIcon} alt="WhatsApp" />
           Entrar em contato
         </a>
       </footer>
     </article>
-  )
-}
+  );
+};
 
 export default TeacherItem;
