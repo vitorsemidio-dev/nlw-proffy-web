@@ -11,7 +11,7 @@ const InputPassword: React.FC<Props> = ({ fieldId, label }) => {
   return (
     <Container>
       <label htmlFor={fieldId}>{label}</label>
-      <input type="password" id={fieldId} />
+      <input type="text" id={fieldId} />
     </Container>
   );
 };
