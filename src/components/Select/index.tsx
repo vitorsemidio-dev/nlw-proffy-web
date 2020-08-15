@@ -19,26 +19,24 @@ const Select: React.FC<Props> = ({
   name,
   options,
   optionTextDefault = 'Selecione uma opção',
-  children,
+  children: _children,
   ...rest
 }) => {
   return (
     <div className="select-block">
-      <label htmlFor={name}>
-        {label}
-      </label>
+      <label htmlFor={name}>{label}</label>
       <select id={name} value="" {...rest}>
         <option value="" disabled hidden>
           {optionTextDefault}
         </option>
-        {options.map(({ value, label }) => (
+        {options.map(({ value, label: labelOption }) => (
           <option key={`${value}`} value={value}>
-            {label}
+            {labelOption}
           </option>
         ))}
       </select>
     </div>
-  )
-}
+  );
+};
 
 export default Select;

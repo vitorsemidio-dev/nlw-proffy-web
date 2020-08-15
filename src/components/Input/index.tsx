@@ -10,17 +10,15 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 const Input: React.FC<Props> = ({
   label,
   name,
-  children,
+  children: _children,
   ...rest
 }) => {
   return (
     <div className="input-block">
-      <label htmlFor={name}>
-        {label}
-      </label>
-      <input type="text" id={name} {...rest}/>
+      <label htmlFor={name}>{label}</label>
+      <input type="text" id={name} {...rest} />
     </div>
-  )
-}
+  );
+};
 
 export default Input;

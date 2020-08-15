@@ -35,7 +35,7 @@ const TeacherList: React.FC = () => {
         subject,
         week_day,
         time,
-      }
+      },
     });
 
     console.log(response.data);
@@ -44,26 +44,28 @@ const TeacherList: React.FC = () => {
 
   return (
     <div id="page-teacher-list" className="container">
-      <PageHeader title="Estes são os proffys disponíveis" >
+      <PageHeader title="Estes são os proffys disponíveis">
         <form id="search-teachers" onSubmit={searchTeachers}>
-          <Select 
+          <Select
             name="subject"
             label="Matéria"
             optionTextDefault="Selecione uma matéria"
             value={subject}
-            onChange={(e) => { setSubject(e.target.value) }}
+            onChange={(e) => {
+              setSubject(e.target.value);
+            }}
             options={[
-              { value: 'Artes', label: 'Artes'},
-              { value: 'Biologia', label: 'Biologia'},
-              { value: 'Educação Física', label: 'Educação Física'},
-              { value: 'Filosofia', label: 'Filosofia'},
-              { value: 'Física', label: 'Física'},
-              { value: 'Informática', label: 'Informática'},
-              { value: 'História', label: 'História'},
-              { value: 'Matemática', label: 'Matemática'},
-              { value: 'Português', label: 'Português'},
-              { value: 'Química', label: 'Química'},
-              { value: 'Sociologia', label: 'Sociologia'},
+              { value: 'Artes', label: 'Artes' },
+              { value: 'Biologia', label: 'Biologia' },
+              { value: 'Educação Física', label: 'Educação Física' },
+              { value: 'Filosofia', label: 'Filosofia' },
+              { value: 'Física', label: 'Física' },
+              { value: 'Informática', label: 'Informática' },
+              { value: 'História', label: 'História' },
+              { value: 'Matemática', label: 'Matemática' },
+              { value: 'Português', label: 'Português' },
+              { value: 'Química', label: 'Química' },
+              { value: 'Sociologia', label: 'Sociologia' },
             ]}
           />
 
@@ -71,7 +73,9 @@ const TeacherList: React.FC = () => {
             name="week_day"
             label="Dia da semana"
             value={week_day}
-            onChange={(e) => { setWeekDay(e.target.value) }}
+            onChange={(e) => {
+              setWeekDay(e.target.value);
+            }}
             optionTextDefault="Selecione um dia"
             options={[
               { value: '0', label: 'Domingo' },
@@ -84,28 +88,27 @@ const TeacherList: React.FC = () => {
             ]}
           />
 
-          <Input 
+          <Input
             type="time"
             label="Hora"
             name="time"
             value={time}
-            onChange={(e) => { setTime(e.target.value) }}
+            onChange={(e) => {
+              setTime(e.target.value);
+            }}
           />
 
-          <button type="submit">
-            Buscar
-          </button>
-
+          <button type="submit">Buscar</button>
         </form>
       </PageHeader>
 
       <main>
-        {teachers.map(teacher => (
+        {teachers.map((teacher) => (
           <TeacherItem key={String(teacher.id)} teacher={teacher} />
         ))}
       </main>
     </div>
-  )
-}
+  );
+};
 
 export default TeacherList;
