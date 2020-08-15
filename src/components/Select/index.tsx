@@ -19,7 +19,7 @@ const Select: React.FC<Props> = ({
   name,
   options,
   optionTextDefault = 'Selecione uma opção',
-  children,
+  children: _children,
   ...rest
 }) => {
   return (
@@ -29,9 +29,9 @@ const Select: React.FC<Props> = ({
         <option value="" disabled hidden>
           {optionTextDefault}
         </option>
-        {options.map(({ value, label }) => (
+        {options.map(({ value, label: labelOption }) => (
           <option key={`${value}`} value={value}>
-            {label}
+            {labelOption}
           </option>
         ))}
       </select>
