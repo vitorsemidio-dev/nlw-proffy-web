@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface ContainerProps {
   isFilled: boolean;
@@ -34,4 +34,21 @@ export const Container = styled.div<ContainerProps>`
 
     transition: 0.1s ease-in-out;
   }
+
+  ${(props) =>
+    props.isFocused &&
+    css`
+      label {
+        color: #ff9000;
+        border: 2px solid #ff9000;
+      }
+    `}
+
+  ${(props) =>
+    props.isFilled &&
+    css`
+      label {
+        color: #ff9000;
+      }
+    `}
 `;
