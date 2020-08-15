@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 interface ContainerProps {
   isFilled: boolean;
   isFocused: boolean;
+  borderRadius?: 'bottom' | 'top' | undefined;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -14,7 +15,12 @@ export const Container = styled.div<ContainerProps>`
   input {
     height: 100%;
     width: 100%;
+    height: 5.6rem;
+    background: var(--color-input-background);
+    border: 1px solid var(--color-line-in-white);
+    outline: 0;
     padding: 0 1.6rem;
+    font: 1.6rem Archivo;
   }
 
   label {
@@ -57,4 +63,24 @@ export const Container = styled.div<ContainerProps>`
         /* transform: scale(0.6) translateY(1.2rem); */
       }
     `}
+
+    ${(props) =>
+      props.borderRadius === 'bottom' &&
+      css`
+        input {
+          border-bottom-left-radius: 0.8rem;
+          border-bottom-right-radius: 0.8rem;
+        }
+      `}
+      ;
+
+    ${(props) =>
+      props.borderRadius === 'top' &&
+      css`
+        input {
+          border-top-left-radius: 0.8rem;
+          border-top-right-radius: 0.8rem;
+        }
+      `}
+      ;
 `;

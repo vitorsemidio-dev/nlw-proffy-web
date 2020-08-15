@@ -29,11 +29,11 @@ const Login: React.FC = () => {
       <h1>Fazer login</h1>
 
       <FormContainer onSubmit={handleSubmit}>
-        <InputPassword label="Campo 1" fieldId="id1" />
+        <InputPassword first label="Campo 1" fieldId="id1" />
 
         <InputPassword label="Campo 2" fieldId="id2" />
 
-        <InputPassword label="Campo 3" fieldId="id3" />
+        <InputPassword last label="Campo 3" fieldId="id3" />
 
         <Input
           label="E-mail"

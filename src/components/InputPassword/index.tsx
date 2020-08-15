@@ -5,9 +5,11 @@ import { Container } from './styles';
 interface Props {
   fieldId: string;
   label: string;
+  first?: boolean;
+  last?: boolean;
 }
 
-const InputPassword: React.FC<Props> = ({ fieldId, label }) => {
+const InputPassword: React.FC<Props> = ({ fieldId, label, first, last }) => {
   const [fieldValue, setFieldValue] = useState('');
   const [isFilled, setIsFilled] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
@@ -24,7 +26,11 @@ const InputPassword: React.FC<Props> = ({ fieldId, label }) => {
     console.log('handleInputFocus');
   }, []);
   return (
-    <Container isFilled={isFilled} isFocused={isFocused}>
+    <Container
+      borderRadius={first ? 'top' : last ? 'bottom' : undefined}
+      isFilled={isFilled}
+      isFocused={isFocused}
+    >
       <label htmlFor={fieldId}>{label}</label>
       <input
         value={fieldValue}
