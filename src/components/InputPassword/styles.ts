@@ -9,7 +9,16 @@ export const Container = styled.div<ContainerProps>`
   position: relative;
   height: 5.6rem;
   width: 100%;
-  background-color: #afaddd;
+
+  &:focus-within::before {
+    content: '';
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    width: 0.2rem;
+    height: calc(100% - 1.6rem);
+    background-color: var(--color-primary-light);
+  }
 
   input {
     height: 100%;
@@ -45,10 +54,8 @@ export const Container = styled.div<ContainerProps>`
     css`
       label {
         top: 0;
-        color: #ff9000;
+        color: var(--color-primary-light);
         transform: scale(0.6);
-        /* transform: scale(0.6) translateY(1.2rem); */
-        /* border: 2px solid #ff9000; */
       }
     `}
 
@@ -57,9 +64,7 @@ export const Container = styled.div<ContainerProps>`
     css`
       label {
         top: 0;
-        /* color: #ff9000; */
         transform: scale(0.6);
-        /* transform: scale(0.6) translateY(1.2rem); */
       }
     `}
 `;
