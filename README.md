@@ -19,3 +19,10 @@ Tela responsável por disponibilizar a possibilidade do usuário resetar sua sen
 
 <img src=".github/esqueci-senha.png" />
 <img src=".github/esqueci-senha-concluido.png" />
+
+# Atualização Perfil
+
+Tela destinada para que o proffy possa atualizar suas informações
+
+<img src=".github/atualizacao-perfil.png" />
+<img src=".github/atualizacao-perfil-concluido.png" />
