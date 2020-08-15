@@ -1,8 +1,12 @@
 # Proffy 2.0
 
+## Sobre o projeto
+
 Aplicação Web desenvolvida durante a **Next Level Week 2.0** utilizando ReactJS.
 
 Após o fim do evento, foi deixado alguns desafios para deixar o Proffy ainda mais incrível.
+
+---
 
 ## Cadastro
 
