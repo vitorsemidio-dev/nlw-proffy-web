@@ -1,6 +1,7 @@
 import React, { useCallback, FormEvent, useState } from 'react';
 
 import Input from '../../components/Input';
+import InputPassword from '../../components/InputPassword';
 
 import landing from '../../assets/images/landing.svg';
 import success from '../../assets/images/success-background.svg';
@@ -28,6 +29,7 @@ const Login: React.FC = () => {
       <h1>Fazer login</h1>
 
       <FormContainer onSubmit={handleSubmit}>
+        <InputPassword />
         <Input
           label="E-mail"
           name="email"
