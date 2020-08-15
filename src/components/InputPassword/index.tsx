@@ -5,13 +5,15 @@ import { Container } from './styles';
 interface Props {
   fieldId: string;
   label: string;
-  containerStyle?: any;
+  type?: string;
+  inputStyle?: any;
 }
 
 const InputPassword: React.FC<Props> = ({
   fieldId,
   label,
-  containerStyle = {},
+  inputStyle = {},
+  type = 'text',
 }) => {
   const [fieldValue, setFieldValue] = useState('');
   const [isFilled, setIsFilled] = useState(false);
@@ -32,12 +34,12 @@ const InputPassword: React.FC<Props> = ({
     <Container isFilled={isFilled} isFocused={isFocused}>
       <label htmlFor={fieldId}>{label}</label>
       <input
-        style={containerStyle}
+        style={inputStyle}
         value={fieldValue}
         onChange={(e) => setFieldValue(e.target.value)}
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
-        type="text"
+        type={type}
         id={fieldId}
       />
     </Container>

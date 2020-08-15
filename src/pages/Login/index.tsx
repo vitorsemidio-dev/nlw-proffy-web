@@ -30,56 +30,23 @@ const Login: React.FC = () => {
 
       <FormContainer onSubmit={handleSubmit}>
         <InputPassword
-          containerStyle={{
+          inputStyle={{
             borderTopRightRadius: 8,
             borderTopLeftRadius: 8,
           }}
-          label="Campo 1"
-          fieldId="id1"
+          label="E-mail"
+          fieldId="email"
         />
 
-        <InputPassword label="Campo 2" fieldId="id2" />
-
         <InputPassword
-          containerStyle={{
+          label="Senha"
+          fieldId="password"
+          type="password"
+          inputStyle={{
             borderBottomRightRadius: 8,
             borderBottomLeftRadius: 8,
           }}
-          label="Campo 3"
-          fieldId="id3"
         />
-
-        <Input
-          label="E-mail"
-          name="email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
-
-        <Input
-          label="Senha"
-          name="password"
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
-
-        <div
-          style={{
-            width: 50,
-            height: 50,
-          }}
-        >
-          haha
-        </div>
-
-        <div className="input-block">
-          <label htmlFor="name">{label}</label>
-          <input type="text" id="name" />
-        </div>
 
         <FormFooter>
           <input type="checkbox" name="Lembrar-me" id="remeber-me" />
