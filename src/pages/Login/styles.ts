@@ -29,6 +29,10 @@ export const BackgroundContent = styled.div`
   }
 `;
 
+export const DescriptionContainer = styled.div`
+  max-width: 40rem;
+`;
+
 export const BackgroundImage = styled.div`
   /* flex: 1; */
   /* background-color: #8257e5; */
@@ -37,6 +41,11 @@ export const BackgroundImage = styled.div`
   background: url(${backgroundImage}) no-repeat center;
 
   background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const Content = styled.div`

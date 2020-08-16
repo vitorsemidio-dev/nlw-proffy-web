@@ -13,6 +13,7 @@ import {
   Content,
   FormContainer,
   FormFooter,
+  DescriptionContainer,
   InputCheckbox,
   ForgotPassword,
 } from './styles';
@@ -34,8 +35,10 @@ const Login: React.FC = () => {
     <Container>
       <BackgroundContent>
         <BackgroundImage>
-          <h1>Proffy</h1>
-          <h2>Sua plataforma de estudos online</h2>
+          <DescriptionContainer>
+            <h1>Proffy</h1>
+            <h2>Sua plataforma de estudos online</h2>
+          </DescriptionContainer>
         </BackgroundImage>
       </BackgroundContent>
 
