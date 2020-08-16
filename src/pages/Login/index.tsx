@@ -1,4 +1,7 @@
 import React, { useCallback, FormEvent, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import api from '../../services/api';
 
 import InputPassword from '../../components/InputPassword';
 
@@ -19,9 +22,9 @@ import {
   InputCheckbox,
   ForgotPassword,
 } from './styles';
-import api from '../../services/api';
 
 const Login: React.FC = () => {
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -36,6 +39,7 @@ const Login: React.FC = () => {
         })
         .then(() => {
           console.log('sucesso');
+          history.push('/');
         })
         .catch(() => {
           console.error('fail to login');
