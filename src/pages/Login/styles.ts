@@ -1,10 +1,35 @@
 import styled from 'styled-components';
 
+import backgroundImage from '../../assets/images/success-background.svg';
+
 export const Container = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const BackgroundContent = styled.div`
+  background-color: #8257e5;
+  width: 100%;
+  height: 100vh;
+`;
+
+export const BackgroundImage = styled.div`
+  /* flex: 1; */
+  /* background-color: #8257e5; */
+  width: 100%;
+  height: 100vh;
+  background: url(${backgroundImage}) no-repeat center;
+
+  background-size: cover;
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  max-width: 70rem;
+  /* height: 100vh; */
+  background-color: yellow;
 `;
 
 export const FormContainer = styled.form`

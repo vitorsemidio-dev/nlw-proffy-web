@@ -8,6 +8,9 @@ import success from '../../assets/images/success-background.svg';
 
 import {
   Container,
+  BackgroundContent,
+  BackgroundImage,
+  Content,
   FormContainer,
   FormFooter,
   InputCheckbox,
@@ -29,54 +32,59 @@ const Login: React.FC = () => {
 
   return (
     <Container>
-      {/* <div>
-        <h1>Proffy</h1>
-        <p>Sua plataforma de estudos online</p>
-      </div> */}
+      <BackgroundContent>
+        <BackgroundImage>
+          <h1>Proffy</h1>
+          <p>Sua plataforma de estudos online</p>
+        </BackgroundImage>
+      </BackgroundContent>
 
-      <FormContainer onSubmit={handleSubmit}>
-        <fieldset>
-          <legend>Fazer login</legend>
-          <InputPassword
-            inputStyle={{
-              borderTopRightRadius: 8,
-              borderTopLeftRadius: 8,
-            }}
-            label="E-mail"
-            fieldId="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+      <div>haha</div>
+      <Content>
+        <FormContainer onSubmit={handleSubmit}>
+          <fieldset>
+            <legend>Fazer login</legend>
+            <InputPassword
+              inputStyle={{
+                borderTopRightRadius: 8,
+                borderTopLeftRadius: 8,
+              }}
+              label="E-mail"
+              fieldId="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
-          <InputPassword
-            label="Senha"
-            fieldId="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-            inputStyle={{
-              borderBottomRightRadius: 8,
-              borderBottomLeftRadius: 8,
-            }}
-          />
+            <InputPassword
+              label="Senha"
+              fieldId="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              inputStyle={{
+                borderBottomRightRadius: 8,
+                borderBottomLeftRadius: 8,
+              }}
+            />
 
-          <FormFooter>
-            <InputCheckbox htmlFor="remeber-me">
-              <input
-                checked={rememberMe}
-                onChange={(_e) => setRememberMe(!rememberMe)}
-                type="checkbox"
-                name="Lembrar-me"
-                id="remeber-me"
-              />
-              Lembrar-me
-            </InputCheckbox>
-            <ForgotPassword href="/">Esqueci minha senha</ForgotPassword>
-          </FormFooter>
+            <FormFooter>
+              <InputCheckbox htmlFor="remeber-me">
+                <input
+                  checked={rememberMe}
+                  onChange={(_e) => setRememberMe(!rememberMe)}
+                  type="checkbox"
+                  name="Lembrar-me"
+                  id="remeber-me"
+                />
+                Lembrar-me
+              </InputCheckbox>
+              <ForgotPassword href="/">Esqueci minha senha</ForgotPassword>
+            </FormFooter>
 
-          <button type="submit">Entrar</button>
-        </fieldset>
-      </FormContainer>
+            <button type="submit">Entrar</button>
+          </fieldset>
+        </FormContainer>
+      </Content>
     </Container>
   );
 };
