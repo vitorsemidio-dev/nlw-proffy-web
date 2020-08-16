@@ -22,10 +22,11 @@ export const BackgroundContent = styled.div`
 
   h2 {
     font-weight: 500;
-    font-size: 2.4rem;
+    font-size: 3.2rem;
     line-height: 4.6rem;
     margin-top: 0.8rem;
     color: var(--color-text-in-primary);
+    max-width: 30rem;
   }
 `;
 

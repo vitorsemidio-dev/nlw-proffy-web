@@ -4,6 +4,7 @@ import Input from '../../components/Input';
 import InputPassword from '../../components/InputPassword';
 
 import landing from '../../assets/images/landing.svg';
+import logoImg from '../../assets/images/logo.svg';
 import success from '../../assets/images/success-background.svg';
 
 import {
@@ -36,7 +37,7 @@ const Login: React.FC = () => {
       <BackgroundContent>
         <BackgroundImage>
           <DescriptionContainer>
-            <h1>Proffy</h1>
+            <img src={logoImg} alt="Logo" />
             <h2>Sua plataforma de estudos online</h2>
           </DescriptionContainer>
         </BackgroundImage>
