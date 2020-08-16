@@ -5,17 +5,21 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  h1 {
-    margin-bottom: 4rem;
-    font-size: 3.6rem;
-  }
 `;
 
 export const FormContainer = styled.form`
   width: 40rem;
   display: flex;
   flex-direction: column;
+
+  fieldset {
+    border: 0;
+  }
+
+  fieldset legend {
+    margin-bottom: 4rem;
+    font-size: 3.6rem;
+  }
 
   & > input {
     width: 100%;

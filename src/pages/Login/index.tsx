@@ -29,47 +29,53 @@ const Login: React.FC = () => {
 
   return (
     <Container>
-      <h1>Fazer login</h1>
+      {/* <div>
+        <h1>Proffy</h1>
+        <p>Sua plataforma de estudos online</p>
+      </div> */}
 
       <FormContainer onSubmit={handleSubmit}>
-        <InputPassword
-          inputStyle={{
-            borderTopRightRadius: 8,
-            borderTopLeftRadius: 8,
-          }}
-          label="E-mail"
-          fieldId="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <fieldset>
+          <legend>Fazer login</legend>
+          <InputPassword
+            inputStyle={{
+              borderTopRightRadius: 8,
+              borderTopLeftRadius: 8,
+            }}
+            label="E-mail"
+            fieldId="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <InputPassword
-          label="Senha"
-          fieldId="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          inputStyle={{
-            borderBottomRightRadius: 8,
-            borderBottomLeftRadius: 8,
-          }}
-        />
+          <InputPassword
+            label="Senha"
+            fieldId="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            inputStyle={{
+              borderBottomRightRadius: 8,
+              borderBottomLeftRadius: 8,
+            }}
+          />
 
-        <FormFooter>
-          <InputCheckbox htmlFor="remeber-me">
-            <input
-              checked={rememberMe}
-              onChange={(_e) => setRememberMe(!rememberMe)}
-              type="checkbox"
-              name="Lembrar-me"
-              id="remeber-me"
-            />
-            Lembrar-me
-          </InputCheckbox>
-          <ForgotPassword href="/">Esqueci minha senha</ForgotPassword>
-        </FormFooter>
+          <FormFooter>
+            <InputCheckbox htmlFor="remeber-me">
+              <input
+                checked={rememberMe}
+                onChange={(_e) => setRememberMe(!rememberMe)}
+                type="checkbox"
+                name="Lembrar-me"
+                id="remeber-me"
+              />
+              Lembrar-me
+            </InputCheckbox>
+            <ForgotPassword href="/">Esqueci minha senha</ForgotPassword>
+          </FormFooter>
 
-        <button type="submit">Entrar</button>
+          <button type="submit">Entrar</button>
+        </fieldset>
       </FormContainer>
     </Container>
   );
