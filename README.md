@@ -16,7 +16,7 @@ Tela para cadastrar novos usuários na aplciação
 <img src=".github/cadastro-concluido.png" />
 
 
-## Login
+## Login ✔️
 
 Tela para o proffy se autenticar na aplicação
 

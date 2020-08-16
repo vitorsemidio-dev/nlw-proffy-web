@@ -45,7 +45,7 @@ const Login: React.FC = () => {
           console.error('fail to login');
         });
     },
-    [email, password],
+    [email, password, history],
   );
 
   return (
