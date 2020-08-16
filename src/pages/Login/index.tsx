@@ -3,6 +3,7 @@ import React, { useCallback, FormEvent, useState } from 'react';
 import InputPassword from '../../components/InputPassword';
 
 import logoImg from '../../assets/images/logo.svg';
+import purpleHeart from '../../assets/images/icons/purple-heart.svg';
 
 import {
   Container,
@@ -10,6 +11,9 @@ import {
   BackgroundImage,
   Content,
   FormContainer,
+  Extra,
+  InfoSignUp,
+  InfoPrice,
   FormFooter,
   DescriptionContainer,
   InputCheckbox,
@@ -84,6 +88,16 @@ const Login: React.FC = () => {
             <button type="submit">Entrar</button>
           </fieldset>
         </FormContainer>
+
+        <Extra>
+          <InfoSignUp>
+            Não tem conta?
+            <a href="/">Cadastre-se</a>
+          </InfoSignUp>
+          <InfoPrice>
+            É de graça <img src={purpleHeart} alt="Ícone Coração Roxo" />
+          </InfoPrice>
+        </Extra>
       </Content>
     </Container>
   );

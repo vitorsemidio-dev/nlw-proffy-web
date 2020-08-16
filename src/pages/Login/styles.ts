@@ -53,12 +53,10 @@ export const Content = styled.div`
   width: 100%;
   height: 100vh;
   max-width: 70rem;
-  padding: 6.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* height: 100vh; */
 `;
 
 export const FormContainer = styled.form`
@@ -119,3 +117,21 @@ export const ForgotPassword = styled.a`
     color: var(--color-text-complement);
   }
 `;
+
+export const Extra = styled.div`
+  width: 100%;
+  max-width: 40rem;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const InfoSignUp = styled.div`
+  a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+`;
+
+export const InfoPrice = styled.div``;
