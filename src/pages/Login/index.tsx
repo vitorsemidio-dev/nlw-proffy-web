@@ -1,11 +1,8 @@
 import React, { useCallback, FormEvent, useState } from 'react';
 
-import Input from '../../components/Input';
 import InputPassword from '../../components/InputPassword';
 
-import landing from '../../assets/images/landing.svg';
 import logoImg from '../../assets/images/logo.svg';
-import success from '../../assets/images/success-background.svg';
 
 import {
   Container,

@@ -51,7 +51,13 @@ export const BackgroundImage = styled.div`
 
 export const Content = styled.div`
   width: 100%;
+  height: 100vh;
   max-width: 70rem;
+  padding: 6.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   /* height: 100vh; */
 `;
 
