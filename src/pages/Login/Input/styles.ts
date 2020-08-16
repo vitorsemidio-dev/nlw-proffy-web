@@ -39,9 +39,6 @@ export const Container = styled.div<ContainerProps>`
     transform: translateY(-50%);
     left: 1.6rem;
 
-    /* display: flex;
-    align-items: center; */
-
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 300;

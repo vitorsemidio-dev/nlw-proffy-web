@@ -10,7 +10,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   inputStyle?: any;
 }
 
-const InputPassword: React.FC<Props> = ({
+const Input: React.FC<Props> = ({
   fieldId,
   label,
   inputStyle = {},
@@ -45,4 +45,4 @@ const InputPassword: React.FC<Props> = ({
   );
 };
 
-export default InputPassword;
+export default Input;

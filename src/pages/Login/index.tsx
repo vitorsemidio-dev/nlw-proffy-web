@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import InputPassword from '../../components/InputPassword';
+import Input from './Input';
 
 import logoImg from '../../assets/images/logo.svg';
 import purpleHeart from '../../assets/images/icons/purple-heart.svg';
@@ -63,7 +63,7 @@ const Login: React.FC = () => {
         <FormContainer onSubmit={handleSubmit}>
           <fieldset>
             <legend>Fazer login</legend>
-            <InputPassword
+            <Input
               inputStyle={{
                 borderTopRightRadius: 8,
                 borderTopLeftRadius: 8,
@@ -74,7 +74,7 @@ const Login: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <InputPassword
+            <Input
               label="Senha"
               fieldId="password"
               value={password}
