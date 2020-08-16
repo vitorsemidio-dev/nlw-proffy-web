@@ -19,6 +19,7 @@ import {
   InputCheckbox,
   ForgotPassword,
 } from './styles';
+import api from '../../services/api';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -28,7 +29,17 @@ const Login: React.FC = () => {
   const handleSubmit = useCallback(
     (eventSumit: FormEvent) => {
       eventSumit.preventDefault();
-      console.log(email, password);
+      api
+        .post('/sessions', {
+          email,
+          password,
+        })
+        .then(() => {
+          console.log('sucesso');
+        })
+        .catch(() => {
+          console.error('fail to login');
+        });
     },
     [email, password],
   );
