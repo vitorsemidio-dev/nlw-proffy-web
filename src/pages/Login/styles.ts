@@ -52,7 +52,7 @@ export const BackgroundImage = styled.div`
 export const Content = styled.div`
   width: 100%;
   height: 100vh;
-  max-width: 70rem;
+  max-width: 58rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,8 +69,9 @@ export const FormContainer = styled.form`
   }
 
   fieldset legend {
+    color: var(--color-text-title);
+    font: 700 3.6rem Poppins;
     margin-bottom: 4rem;
-    font-size: 3.6rem;
   }
 
   & > input {
