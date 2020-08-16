@@ -35,11 +35,10 @@ const Login: React.FC = () => {
       <BackgroundContent>
         <BackgroundImage>
           <h1>Proffy</h1>
-          <p>Sua plataforma de estudos online</p>
+          <h2>Sua plataforma de estudos online</h2>
         </BackgroundImage>
       </BackgroundContent>
 
-      <div>haha</div>
       <Content>
         <FormContainer onSubmit={handleSubmit}>
           <fieldset>
