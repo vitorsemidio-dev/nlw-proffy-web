@@ -66,4 +66,22 @@ export const FormContainer = styled.form`
   justify-content: center;
 
   flex-direction: column;
+
+  fieldset {
+    width: 100%;
+    border: 0;
+
+    legend {
+      color: var(--color-text-title);
+      font: 700 3.6rem Poppins;
+      span {
+        margin-top: 1.6rem;
+        display: block;
+        color: var(--color-text-base);
+        font: 500 1.6rem Poppins;
+        max-width: 16rem;
+        margin-bottom: 4rem;
+      }
+    }
+  }
 `;
