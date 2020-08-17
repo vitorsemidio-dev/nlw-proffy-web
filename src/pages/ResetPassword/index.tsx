@@ -1,21 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Input from '../Login/Input';
 
 import BackgroundImage from '../../components/BackgroundImage';
 
 import { Container, FormContainer, Form } from './styles';
+import api from '../../services/api';
 
 const ResetPassword: React.FC = () => {
+  const history = useHistory();
   const [token, setToken] = useState('');
   const [newPassword, setnewPassword] = useState('');
   const [newPasswordConfirmation, setnewPasswordConfirmation] = useState('');
+
+  const handleSubmit = useCallback(
+    (eventSubmit: FormEvent) => {
+      eventSubmit.preventDefault();
+      api
+        .post('/password/reset', {
+          token,
+          newPassword,
+          newPasswordConfirmation,
+        })
+        .then(() => {
+          console.log('sucesso');
+          history.push('/login');
+        })
+        .catch((err) => {
+          console.error('fail to reset');
+        });
+    },
+    [token, newPassword, newPasswordConfirmation, history],
+  );
+
   return (
     <Container>
       <BackgroundImage text="Tudo bem esquecer às vezes" />
 
       <FormContainer>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <fieldset>
             <legend>
               Token
