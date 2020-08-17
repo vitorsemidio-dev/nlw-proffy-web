@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import api from '../../services/api';
+
+import Input from '../Login/Input';
 
 import logoImg from '../../assets/images/logo.svg';
-import Input from '../Login/Input';
 
 import {
   Container,
@@ -13,15 +17,37 @@ import {
 } from './styles';
 
 const Register: React.FC = () => {
+  const history = useHistory();
   const [name, setName] = useState('');
   const [lastname, setLastname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const handleSubmit = useCallback(
+    (eventSubmit: FormEvent) => {
+      eventSubmit.preventDefault();
+      api
+        .post('/users', {
+          name,
+          lastname,
+          email,
+          password,
+        })
+        .then(() => {
+          console.log('sucesso');
+          history.push('/login');
+        })
+        .catch((_err) => {
+          console.error('fail to create user');
+        });
+    },
+    [name, lastname, email, password, history],
+  );
+
   return (
     <Container>
       <ContentForm>
-        <FormContainer>
+        <FormContainer onSubmit={handleSubmit}>
           <fieldset>
             <legend>
               Cadastro
