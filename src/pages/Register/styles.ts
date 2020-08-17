@@ -4,8 +4,8 @@ import backgroundImage from '../../assets/images/success-background.svg';
 
 export const Container = styled.div`
   width: 100%;
+  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 `;
 
@@ -47,7 +47,7 @@ export const BackgroundImage = styled.div`
   flex-direction: column;
 `;
 
-export const Content = styled.div`
+export const ContentForm = styled.div`
   width: 100%;
   height: 100vh;
   max-width: 58rem;
@@ -58,18 +58,29 @@ export const Content = styled.div`
 `;
 
 export const FormContainer = styled.form`
-  width: 40rem;
+  width: 100%;
+  max-width: 40rem;
+
   display: flex;
+
   flex-direction: column;
 
   fieldset {
     border: 0;
-  }
 
-  fieldset legend {
-    color: var(--color-text-title);
-    font: 700 3.6rem Poppins;
-    margin-bottom: 4rem;
+    legend {
+      color: var(--color-text-title);
+      font: 700 3.6rem Poppins;
+      span {
+        margin-top: 1.6rem;
+        margin-bottom: 3.2rem;
+
+        display: block;
+        color: var(--color-text-base);
+        font: 500 1.6rem Poppins;
+        max-width: 16rem;
+      }
+    }
   }
 
   & > input {
@@ -93,44 +104,3 @@ export const FormContainer = styled.form`
     margin-top: 4rem;
   }
 `;
-
-export const FormFooter = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2.4rem;
-`;
-
-export const InputCheckbox = styled.label`
-  vertical-align: middle;
-  input {
-    margin-right: 1rem;
-  }
-`;
-
-export const ForgotPassword = styled.a`
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--color-text-base);
-  &:hover {
-    color: var(--color-text-complement);
-  }
-`;
-
-export const Extra = styled.div`
-  width: 100%;
-  max-width: 40rem;
-  margin-top: 10rem;
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const InfoSignUp = styled.div`
-  a {
-    display: block;
-    text-decoration: none;
-    color: var(--color-primary);
-  }
-`;
-
-export const InfoPrice = styled.div``;

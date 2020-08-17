@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Landing from './pages/Landing';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import TeacherForm from './pages/TeacherForm';
 import TeacherList from './pages/TeacherList';
 
@@ -12,6 +13,7 @@ const Routes: React.FC = () => {
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
         <Route path="/study" component={TeacherList} />
         <Route path="/give-classes" component={TeacherForm} />
       </Switch>

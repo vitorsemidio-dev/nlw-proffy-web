@@ -8,7 +8,7 @@ Após o fim do evento, foi deixado alguns desafios para deixar o Proffy ainda ma
 
 ---
 
-## Cadastro
+## Cadastro ✔️
 
 Tela para cadastrar novos usuários na aplciação
 
