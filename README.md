@@ -8,7 +8,7 @@ Após o fim do evento, foi deixado alguns desafios para deixar o Proffy ainda ma
 
 ---
 
-## Cadastro ✔️
+## Cadastro 🛠️
 
 Tela para cadastrar novos usuários na aplciação
 
@@ -16,14 +16,14 @@ Tela para cadastrar novos usuários na aplciação
 <img src=".github/cadastro-concluido.png" />
 
 
-## Login ✔️
+## Login 🛠️
 
 Tela para o proffy se autenticar na aplicação
 
 <img src=".github/login.png" />
 
 
-## Esqueci a Senha
+## Esqueci a Senha 👷‍♂️🛠️👷‍♀️
 
 Tela responsável por disponibilizar a possibilidade do usuário resetar sua senha caso tenha esquecido
 
