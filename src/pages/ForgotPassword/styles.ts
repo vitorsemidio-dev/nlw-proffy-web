@@ -4,10 +4,6 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: space-between;
-  h1 {
-    min-width: 40rem;
-  }
 `;
 
 export const ContentForm = styled.div`
@@ -25,8 +21,11 @@ export const FormContainer = styled.form`
   max-width: 40rem;
 
   display: flex;
-
   flex-direction: column;
+
+  & > input {
+    width: 100%;
+  }
 
   fieldset {
     border: 0;
@@ -43,10 +42,6 @@ export const FormContainer = styled.form`
         font: 500 1.6rem Poppins;
       }
     }
-  }
-
-  & > input {
-    width: 100%;
   }
 
   button {

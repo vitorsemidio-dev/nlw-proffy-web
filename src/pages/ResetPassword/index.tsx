@@ -17,7 +17,10 @@ const ResetPassword: React.FC = () => {
       <FormContainer>
         <Form>
           <fieldset>
-            <legend>Token</legend>
+            <legend>
+              Token
+              <span>Informe o token que enviamos para seu e-mail</span>
+            </legend>
 
             <Input
               fieldId="token"
@@ -44,6 +47,8 @@ const ResetPassword: React.FC = () => {
               onChange={(e) => setnewPasswordConfirmation(e.target.value)}
             />
           </fieldset>
+
+          <button type="submit">Salvar nova senha</button>
         </Form>
       </FormContainer>
     </Container>
