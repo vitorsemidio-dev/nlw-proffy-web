@@ -22,7 +22,7 @@ const ForgotPassword: React.FC = () => {
         })
         .then(() => {
           console.log('sucesso');
-          history.push('/login');
+          history.push('/reset-password');
         })
         .catch((_err) => {
           console.error('fail to reset password');
