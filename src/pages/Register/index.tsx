@@ -42,6 +42,10 @@ const Register: React.FC = () => {
               label="Nome"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              inputStyle={{
+                borderTopRightRadius: 8,
+                borderTopLeftRadius: 8,
+              }}
             />
 
             <Input
@@ -65,6 +69,10 @@ const Register: React.FC = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              inputStyle={{
+                borderBottomRightRadius: 8,
+                borderBottomLeftRadius: 8,
+              }}
             />
 
             <button type="submit">Concluir cadastro</button>
