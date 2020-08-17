@@ -1,7 +1,7 @@
 import React, { useState, useCallback, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import Input from '../Login/Input';
+import InputForm from '../../components/InputForm';
 
 import BackgroundImage from '../../components/BackgroundImage';
 
@@ -32,8 +32,6 @@ const ForgotPassword: React.FC = () => {
   );
   return (
     <Container>
-      <BackgroundImage text="Sua plataforma de estudos online" />
-
       <ContentForm>
         <FormContainer onSubmit={handleSubmit}>
           <fieldset>
@@ -42,18 +40,23 @@ const ForgotPassword: React.FC = () => {
               <span>Não esquenta, vamos dá um jeito nisso.</span>
             </legend>
 
-            <Input
+            <InputForm
               fieldId="email"
               type="email"
               label="E-mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              inputStyle={{
+                borderRadius: 8,
+              }}
             />
 
             <button type="submit">Enviar</button>
           </fieldset>
         </FormContainer>
       </ContentForm>
+
+      <BackgroundImage text="Sua plataforma de estudos online" />
     </Container>
   );
 };

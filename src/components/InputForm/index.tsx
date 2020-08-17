@@ -10,7 +10,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   inputStyle?: React.CSSProperties | undefined;
 }
 
-const Input: React.FC<Props> = ({
+const InputForm: React.FC<Props> = ({
   fieldId,
   label,
   inputStyle = {},
@@ -18,7 +18,6 @@ const Input: React.FC<Props> = ({
   type = 'text',
   ...rest
 }) => {
-  // const [fieldValue, setFieldValue] = useState('');
   const [isFilled, setIsFilled] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
 
@@ -45,4 +44,4 @@ const Input: React.FC<Props> = ({
   );
 };
 
-export default Input;
+export default InputForm;

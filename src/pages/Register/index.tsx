@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import Input from '../Login/Input';
+import InputForm from '../../components/InputForm';
 
 import logoImg from '../../assets/images/logo.svg';
 
@@ -54,7 +54,7 @@ const Register: React.FC = () => {
               <span>Preencha os dados para cadastro</span>
             </legend>
 
-            <Input
+            <InputForm
               fieldId="name"
               label="Nome"
               value={name}
@@ -65,14 +65,14 @@ const Register: React.FC = () => {
               }}
             />
 
-            <Input
+            <InputForm
               fieldId="lastname"
               label="Sobrenome"
               value={lastname}
               onChange={(e) => setLastname(e.target.value)}
             />
 
-            <Input
+            <InputForm
               fieldId="email"
               label="E-mail"
               type="email"
@@ -80,7 +80,7 @@ const Register: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <Input
+            <InputForm
               fieldId="password"
               label="Senha"
               type="password"
