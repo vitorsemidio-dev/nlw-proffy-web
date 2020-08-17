@@ -1,19 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Input from '../Login/Input';
 
 import BackgroundImage from '../../components/BackgroundImage';
 
 import { Container, ContentForm, FormContainer } from './styles';
+import api from '../../services/api';
 
 const ForgotPassword: React.FC = () => {
+  const history = useHistory();
+
   const [email, setEmail] = useState('');
+
+  const handleSubmit = useCallback(
+    (eventSubmit: FormEvent) => {
+      eventSubmit.preventDefault();
+      api
+        .post('/password/forgot', {
+          email,
+        })
+        .then(() => {
+          console.log('sucesso');
+          history.push('/login');
+        })
+        .catch((_err) => {
+          console.error('fail to reset password');
+        });
+    },
+    [history, email],
+  );
   return (
     <Container>
       <BackgroundImage text="Sua plataforma de estudos online" />
 
       <ContentForm>
-        <FormContainer>
+        <FormContainer onSubmit={handleSubmit}>
           <fieldset>
             <legend>
               Eita, esqueceu sua senha?
