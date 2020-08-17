@@ -7,7 +7,7 @@ import { Container } from './styles';
 const ForgotPassword: React.FC = () => {
   return (
     <Container>
-      <BackgroundImage />
+      <BackgroundImage text="Sua plataforma de estudos online" />
       <h1>haha</h1>
     </Container>
   );
