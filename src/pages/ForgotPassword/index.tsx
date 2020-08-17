@@ -56,7 +56,10 @@ const ForgotPassword: React.FC = () => {
         </FormContainer>
       </ContentForm>
 
-      <BackgroundImage text="Sua plataforma de estudos online" />
+      <BackgroundImage
+        title="Deu um branco?"
+        text="Até os melhores Proffys às vezes esquecem sua senha"
+      />
     </Container>
   );
 };

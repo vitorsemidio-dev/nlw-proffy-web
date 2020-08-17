@@ -15,7 +15,7 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({ text, title }) => {
     <Container>
       <Image>
         <DescriptionContainer>
-          {title || <img src={logoImg} alt="Logo" />}
+          {title ? <h1>{title}</h1> : <img src={logoImg} alt="Logo" />}
           <h2>{text}</h2>
         </DescriptionContainer>
       </Image>

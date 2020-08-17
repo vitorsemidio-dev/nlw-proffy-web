@@ -98,7 +98,7 @@ const Login: React.FC = () => {
         <Extra>
           <InfoSignUp>
             Não tem conta?
-            <a href="/">Cadastre-se</a>
+            <a href="/register">Cadastre-se</a>
           </InfoSignUp>
           <InfoPrice>
             É de graça <img src={purpleHeart} alt="Ícone Coração Roxo" />

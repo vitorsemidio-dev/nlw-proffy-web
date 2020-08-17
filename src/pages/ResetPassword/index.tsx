@@ -37,7 +37,7 @@ const ResetPassword: React.FC = () => {
 
   return (
     <Container>
-      <BackgroundImage text="Tudo bem esquecer às vezes" />
+      <BackgroundImage text="Queremos você conosco de novo" />
 
       <FormContainer>
         <Form onSubmit={handleSubmit}>

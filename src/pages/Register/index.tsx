@@ -3,18 +3,10 @@ import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
+import BackgroundImagem from '../../components/BackgroundImage';
 import InputForm from '../../components/InputForm';
 
-import logoImg from '../../assets/images/logo.svg';
-
-import {
-  Container,
-  BackgroundContent,
-  BackgroundImage,
-  DescriptionContainer,
-  ContentForm,
-  FormContainer,
-} from './styles';
+import { Container, ContentForm, FormContainer } from './styles';
 
 const Register: React.FC = () => {
   const history = useHistory();
@@ -97,14 +89,10 @@ const Register: React.FC = () => {
         </FormContainer>
       </ContentForm>
 
-      <BackgroundContent>
-        <BackgroundImage>
-          <DescriptionContainer>
-            <img src={logoImg} alt="Logo" />
-            <h2>Sua plataforma de estudos online</h2>
-          </DescriptionContainer>
-        </BackgroundImage>
-      </BackgroundContent>
+      <BackgroundImagem
+        title="Torne-se um Proffy"
+        text="Conexe-se a maior plataforma de estudos online"
+      />
     </Container>
   );
 };
