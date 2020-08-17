@@ -1,12 +1,13 @@
 import React, { useState, useCallback, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import api from '../../services/api';
+
 import Input from '../Login/Input';
 
 import BackgroundImage from '../../components/BackgroundImage';
 
 import { Container, FormContainer, Form } from './styles';
-import api from '../../services/api';
 
 const ResetPassword: React.FC = () => {
   const history = useHistory();
@@ -27,7 +28,7 @@ const ResetPassword: React.FC = () => {
           console.log('sucesso');
           history.push('/login');
         })
-        .catch((err) => {
+        .catch((_err) => {
           console.error('fail to reset');
         });
     },
