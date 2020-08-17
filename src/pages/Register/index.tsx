@@ -14,6 +14,10 @@ import {
 
 const Register: React.FC = () => {
   const [name, setName] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <Container>
       <BackgroundContent>
@@ -36,9 +40,34 @@ const Register: React.FC = () => {
             <Input
               fieldId="name"
               label="Nome"
-              onChange={(e) => setName(e.target.value)}
               value={name}
+              onChange={(e) => setName(e.target.value)}
             />
+
+            <Input
+              fieldId="lastname"
+              label="Sobrenome"
+              value={lastname}
+              onChange={(e) => setLastname(e.target.value)}
+            />
+
+            <Input
+              fieldId="email"
+              label="E-mail"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <Input
+              fieldId="password"
+              label="Senha"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+
+            <button type="submit">Concluir cadastro</button>
           </fieldset>
         </FormContainer>
       </ContentForm>
