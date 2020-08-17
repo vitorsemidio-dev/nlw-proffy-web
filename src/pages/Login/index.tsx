@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
+import BackgroundImage from '../../components/BackgroundImage';
 import InputForm from '../../components/InputForm';
 
 import logoImg from '../../assets/images/logo.svg';
@@ -10,15 +11,12 @@ import purpleHeart from '../../assets/images/icons/purple-heart.svg';
 
 import {
   Container,
-  BackgroundContent,
-  BackgroundImage,
   Content,
   FormContainer,
   Extra,
   InfoSignUp,
   InfoPrice,
   FormFooter,
-  DescriptionContainer,
   InputCheckbox,
   ForgotPassword,
 } from './styles';
@@ -50,14 +48,7 @@ const Login: React.FC = () => {
 
   return (
     <Container>
-      <BackgroundContent>
-        <BackgroundImage>
-          <DescriptionContainer>
-            <img src={logoImg} alt="Logo" />
-            <h2>Sua plataforma de estudos online</h2>
-          </DescriptionContainer>
-        </BackgroundImage>
-      </BackgroundContent>
+      <BackgroundImage text="Sua plataforma de estudos online" />
 
       <Content>
         <FormContainer onSubmit={handleSubmit}>
