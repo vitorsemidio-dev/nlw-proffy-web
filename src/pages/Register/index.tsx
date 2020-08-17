@@ -20,15 +20,6 @@ const Register: React.FC = () => {
 
   return (
     <Container>
-      <BackgroundContent>
-        <BackgroundImage>
-          <DescriptionContainer>
-            <img src={logoImg} alt="Logo" />
-            <h2>Sua plataforma de estudos online</h2>
-          </DescriptionContainer>
-        </BackgroundImage>
-      </BackgroundContent>
-
       <ContentForm>
         <FormContainer>
           <fieldset>
@@ -79,6 +70,15 @@ const Register: React.FC = () => {
           </fieldset>
         </FormContainer>
       </ContentForm>
+
+      <BackgroundContent>
+        <BackgroundImage>
+          <DescriptionContainer>
+            <img src={logoImg} alt="Logo" />
+            <h2>Sua plataforma de estudos online</h2>
+          </DescriptionContainer>
+        </BackgroundImage>
+      </BackgroundContent>
     </Container>
   );
 };
