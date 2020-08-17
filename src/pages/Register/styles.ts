@@ -84,7 +84,7 @@ export const FormContainer = styled.form`
   }
 
   & > input {
-    width: 100%100%;
+    width: 100%;
   }
 
   button {
