@@ -7,7 +7,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   type?: string;
   value: string;
-  inputStyle?: any;
+  inputStyle?: React.CSSProperties | undefined;
 }
 
 const Input: React.FC<Props> = ({
