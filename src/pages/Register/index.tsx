@@ -3,18 +3,11 @@ import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import Input from '../Login/Input';
+import BackgroundImagem from '../../components/BackgroundImage';
+import ButtonForm from '../../components/ButtonForm';
+import InputForm from '../../components/InputForm';
 
-import logoImg from '../../assets/images/logo.svg';
-
-import {
-  Container,
-  BackgroundContent,
-  BackgroundImage,
-  DescriptionContainer,
-  ContentForm,
-  FormContainer,
-} from './styles';
+import { Container, Form, FormContainer } from './styles';
 
 const Register: React.FC = () => {
   const history = useHistory();
@@ -46,15 +39,15 @@ const Register: React.FC = () => {
 
   return (
     <Container>
-      <ContentForm>
-        <FormContainer onSubmit={handleSubmit}>
+      <FormContainer>
+        <Form onSubmit={handleSubmit}>
           <fieldset>
             <legend>
               Cadastro
               <span>Preencha os dados para cadastro</span>
             </legend>
 
-            <Input
+            <InputForm
               fieldId="name"
               label="Nome"
               value={name}
@@ -65,14 +58,14 @@ const Register: React.FC = () => {
               }}
             />
 
-            <Input
+            <InputForm
               fieldId="lastname"
               label="Sobrenome"
               value={lastname}
               onChange={(e) => setLastname(e.target.value)}
             />
 
-            <Input
+            <InputForm
               fieldId="email"
               label="E-mail"
               type="email"
@@ -80,7 +73,7 @@ const Register: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <Input
+            <InputForm
               fieldId="password"
               label="Senha"
               type="password"
@@ -92,19 +85,15 @@ const Register: React.FC = () => {
               }}
             />
 
-            <button type="submit">Concluir cadastro</button>
+            <ButtonForm type="submit">Concluir cadastro</ButtonForm>
           </fieldset>
-        </FormContainer>
-      </ContentForm>
+        </Form>
+      </FormContainer>
 
-      <BackgroundContent>
-        <BackgroundImage>
-          <DescriptionContainer>
-            <img src={logoImg} alt="Logo" />
-            <h2>Sua plataforma de estudos online</h2>
-          </DescriptionContainer>
-        </BackgroundImage>
-      </BackgroundContent>
+      <BackgroundImagem
+        title="Torne-se um Proffy"
+        text="Conexe-se a maior plataforma de estudos online"
+      />
     </Container>
   );
 };

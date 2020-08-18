@@ -1,24 +1,22 @@
 import React, { useCallback, FormEvent, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import Input from './Input';
+import BackgroundImage from '../../components/BackgroundImage';
+import InputForm from '../../components/InputForm';
+import ButtonForm from '../../components/ButtonForm';
 
-import logoImg from '../../assets/images/logo.svg';
 import purpleHeart from '../../assets/images/icons/purple-heart.svg';
 
 import {
   Container,
-  BackgroundContent,
-  BackgroundImage,
-  Content,
   FormContainer,
+  Form,
   Extra,
   InfoSignUp,
   InfoPrice,
   FormFooter,
-  DescriptionContainer,
   InputCheckbox,
   ForgotPassword,
 } from './styles';
@@ -50,31 +48,24 @@ const Login: React.FC = () => {
 
   return (
     <Container>
-      <BackgroundContent>
-        <BackgroundImage>
-          <DescriptionContainer>
-            <img src={logoImg} alt="Logo" />
-            <h2>Sua plataforma de estudos online</h2>
-          </DescriptionContainer>
-        </BackgroundImage>
-      </BackgroundContent>
+      <BackgroundImage text="Sua plataforma de estudos online" />
 
-      <Content>
-        <FormContainer onSubmit={handleSubmit}>
+      <FormContainer>
+        <Form onSubmit={handleSubmit}>
           <fieldset>
             <legend>Fazer login</legend>
-            <Input
-              inputStyle={{
-                borderTopRightRadius: 8,
-                borderTopLeftRadius: 8,
-              }}
+            <InputForm
               label="E-mail"
               fieldId="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              inputStyle={{
+                borderTopRightRadius: 8,
+                borderTopLeftRadius: 8,
+              }}
             />
 
-            <Input
+            <InputForm
               label="Senha"
               fieldId="password"
               value={password}
@@ -100,20 +91,20 @@ const Login: React.FC = () => {
               <ForgotPassword href="/">Esqueci minha senha</ForgotPassword>
             </FormFooter>
 
-            <button type="submit">Entrar</button>
+            <ButtonForm type="submit">Entrar</ButtonForm>
           </fieldset>
-        </FormContainer>
+        </Form>
 
         <Extra>
           <InfoSignUp>
             Não tem conta?
-            <a href="/">Cadastre-se</a>
+            <Link to="/register">Cadastre-se</Link>
           </InfoSignUp>
           <InfoPrice>
             É de graça <img src={purpleHeart} alt="Ícone Coração Roxo" />
           </InfoPrice>
         </Extra>
-      </Content>
+      </FormContainer>
     </Container>
   );
 };

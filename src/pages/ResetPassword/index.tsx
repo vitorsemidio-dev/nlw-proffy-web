@@ -3,8 +3,8 @@ import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import Input from '../Login/Input';
-
+import InputForm from '../../components/InputForm';
+import ButtonForm from '../../components/ButtonForm';
 import BackgroundImage from '../../components/BackgroundImage';
 
 import { Container, FormContainer, Form } from './styles';
@@ -37,7 +37,7 @@ const ResetPassword: React.FC = () => {
 
   return (
     <Container>
-      <BackgroundImage text="Tudo bem esquecer às vezes" />
+      <BackgroundImage text="Queremos você conosco de novo" />
 
       <FormContainer>
         <Form onSubmit={handleSubmit}>
@@ -47,33 +47,44 @@ const ResetPassword: React.FC = () => {
               <span>Informe o token que enviamos para seu e-mail</span>
             </legend>
 
-            <Input
+            <InputForm
               fieldId="token"
               label="Token"
               value={token}
               type="text"
               onChange={(e) => setToken(e.target.value)}
+              inputStyle={{
+                borderRadius: 8,
+              }}
             />
           </fieldset>
 
           <fieldset>
             <legend>Nova Senha</legend>
 
-            <Input
+            <InputForm
               fieldId="new-password"
               label="Nova Senha"
               value={newPassword}
               onChange={(e) => setnewPassword(e.target.value)}
+              inputStyle={{
+                borderTopRightRadius: 8,
+                borderTopLeftRadius: 8,
+              }}
             />
-            <Input
+            <InputForm
               fieldId="new-password-confirmation"
               label="Confirmação Senha"
               value={newPasswordConfirmation}
               onChange={(e) => setnewPasswordConfirmation(e.target.value)}
+              inputStyle={{
+                borderBottomRightRadius: 8,
+                borderBottomLeftRadius: 8,
+              }}
             />
           </fieldset>
 
-          <button type="submit">Salvar nova senha</button>
+          <ButtonForm type="submit">Salvar nova senha</ButtonForm>
         </Form>
       </FormContainer>
     </Container>

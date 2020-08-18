@@ -1,11 +1,12 @@
 import React, { useState, useCallback, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import Input from '../Login/Input';
+import InputForm from '../../components/InputForm';
+import ButtonForm from '../../components/ButtonForm';
 
 import BackgroundImage from '../../components/BackgroundImage';
 
-import { Container, ContentForm, FormContainer } from './styles';
+import { Container, FormContainer, Form } from './styles';
 import api from '../../services/api';
 
 const ForgotPassword: React.FC = () => {
@@ -32,28 +33,34 @@ const ForgotPassword: React.FC = () => {
   );
   return (
     <Container>
-      <BackgroundImage text="Sua plataforma de estudos online" />
-
-      <ContentForm>
-        <FormContainer onSubmit={handleSubmit}>
+      <FormContainer>
+        <Form onSubmit={handleSubmit}>
           <fieldset>
             <legend>
               Eita, esqueceu sua senha?
               <span>Não esquenta, vamos dá um jeito nisso.</span>
             </legend>
 
-            <Input
+            <InputForm
               fieldId="email"
               type="email"
               label="E-mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              inputStyle={{
+                borderRadius: 8,
+              }}
             />
 
-            <button type="submit">Enviar</button>
+            <ButtonForm type="submit">Enviar</ButtonForm>
           </fieldset>
-        </FormContainer>
-      </ContentForm>
+        </Form>
+      </FormContainer>
+
+      <BackgroundImage
+        title="Deu um branco?"
+        text="Até os melhores Proffys às vezes esquecem sua senha"
+      />
     </Container>
   );
 };
