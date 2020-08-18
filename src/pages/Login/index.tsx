@@ -1,5 +1,5 @@
 import React, { useCallback, FormEvent, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
@@ -98,7 +98,7 @@ const Login: React.FC = () => {
         <Extra>
           <InfoSignUp>
             Não tem conta?
-            <a href="/register">Cadastre-se</a>
+            <Link to="/register">Cadastre-se</Link>
           </InfoSignUp>
           <InfoPrice>
             É de graça <img src={purpleHeart} alt="Ícone Coração Roxo" />

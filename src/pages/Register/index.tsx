@@ -4,9 +4,10 @@ import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
 import BackgroundImagem from '../../components/BackgroundImage';
+import ButtonForm from '../../components/ButtonForm';
 import InputForm from '../../components/InputForm';
 
-import { Container, ContentForm, FormContainer } from './styles';
+import { Container, Form, FormContainer } from './styles';
 
 const Register: React.FC = () => {
   const history = useHistory();
@@ -38,8 +39,8 @@ const Register: React.FC = () => {
 
   return (
     <Container>
-      <ContentForm>
-        <FormContainer onSubmit={handleSubmit}>
+      <FormContainer>
+        <Form onSubmit={handleSubmit}>
           <fieldset>
             <legend>
               Cadastro
@@ -84,10 +85,10 @@ const Register: React.FC = () => {
               }}
             />
 
-            <button type="submit">Concluir cadastro</button>
+            <ButtonForm type="submit">Concluir cadastro</ButtonForm>
           </fieldset>
-        </FormContainer>
-      </ContentForm>
+        </Form>
+      </FormContainer>
 
       <BackgroundImagem
         title="Torne-se um Proffy"

@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
 import InputForm from '../../components/InputForm';
-
+import ButtonForm from '../../components/ButtonForm';
 import BackgroundImage from '../../components/BackgroundImage';
 
 import { Container, FormContainer, Form } from './styles';
@@ -84,7 +84,7 @@ const ResetPassword: React.FC = () => {
             />
           </fieldset>
 
-          <button type="submit">Salvar nova senha</button>
+          <ButtonForm type="submit">Salvar nova senha</ButtonForm>
         </Form>
       </FormContainer>
     </Container>
