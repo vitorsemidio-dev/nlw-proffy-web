@@ -2,10 +2,11 @@ import React, { useState, useCallback, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import InputForm from '../../components/InputForm';
+import ButtonForm from '../../components/ButtonForm';
 
 import BackgroundImage from '../../components/BackgroundImage';
 
-import { Container, ContentForm, FormContainer } from './styles';
+import { Container, FormContainer, Form } from './styles';
 import api from '../../services/api';
 
 const ForgotPassword: React.FC = () => {
@@ -32,8 +33,8 @@ const ForgotPassword: React.FC = () => {
   );
   return (
     <Container>
-      <ContentForm>
-        <FormContainer onSubmit={handleSubmit}>
+      <FormContainer>
+        <Form onSubmit={handleSubmit}>
           <fieldset>
             <legend>
               Eita, esqueceu sua senha?
@@ -51,10 +52,10 @@ const ForgotPassword: React.FC = () => {
               }}
             />
 
-            <button type="submit">Enviar</button>
+            <ButtonForm type="submit">Enviar</ButtonForm>
           </fieldset>
-        </FormContainer>
-      </ContentForm>
+        </Form>
+      </FormContainer>
 
       <BackgroundImage
         title="Deu um branco?"
