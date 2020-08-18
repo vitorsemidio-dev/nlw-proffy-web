@@ -5,14 +5,14 @@ import api from '../../services/api';
 
 import BackgroundImage from '../../components/BackgroundImage';
 import InputForm from '../../components/InputForm';
+import ButtonForm from '../../components/ButtonForm';
 
-import logoImg from '../../assets/images/logo.svg';
 import purpleHeart from '../../assets/images/icons/purple-heart.svg';
 
 import {
   Container,
-  Content,
   FormContainer,
+  Form,
   Extra,
   InfoSignUp,
   InfoPrice,
@@ -50,8 +50,8 @@ const Login: React.FC = () => {
     <Container>
       <BackgroundImage text="Sua plataforma de estudos online" />
 
-      <Content>
-        <FormContainer onSubmit={handleSubmit}>
+      <FormContainer>
+        <Form onSubmit={handleSubmit}>
           <fieldset>
             <legend>Fazer login</legend>
             <InputForm
@@ -91,9 +91,9 @@ const Login: React.FC = () => {
               <ForgotPassword href="/">Esqueci minha senha</ForgotPassword>
             </FormFooter>
 
-            <button type="submit">Entrar</button>
+            <ButtonForm type="submit">Entrar</ButtonForm>
           </fieldset>
-        </FormContainer>
+        </Form>
 
         <Extra>
           <InfoSignUp>
@@ -104,7 +104,7 @@ const Login: React.FC = () => {
             É de graça <img src={purpleHeart} alt="Ícone Coração Roxo" />
           </InfoPrice>
         </Extra>
-      </Content>
+      </FormContainer>
     </Container>
   );
 };
