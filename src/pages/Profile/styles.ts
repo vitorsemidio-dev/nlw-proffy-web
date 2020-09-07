@@ -147,4 +147,32 @@ export const FormContainer = styled.main`
   fieldset {
     border: 0;
   }
+
+  fieldset + fieldset {
+    margin-top: 6.4rem;
+  }
+`;
+
+export const FieldAboutClass = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 3.2rem;
+`;
+
+export const FieldUser = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3.2rem;
+`;
+
+export const FieldUserContact = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 3.2rem;
+`;
+
+export const FieldSchedule = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-column-gap: 3.2rem;
 `;

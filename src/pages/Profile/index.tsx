@@ -18,6 +18,10 @@ import {
   BackgroundImage,
   UserInfoContainer,
   FormContainer,
+  FieldAboutClass,
+  FieldUser,
+  FieldUserContact,
+  FieldSchedule,
 } from './styles';
 
 const Profile: React.FC = () => {
@@ -63,65 +67,73 @@ const Profile: React.FC = () => {
           <fieldset>
             <legend>Seus Dados</legend>
 
-            <Input name="name" label="Nome" value="Nome" />
+            <FieldUser>
+              <Input name="name" label="Nome" value="Nome" />
 
-            <Input name="lastname" label="Sobrenome" value="Sobrenome" />
+              <Input name="lastname" label="Sobrenome" value="Sobrenome" />
+            </FieldUser>
 
-            <Input name="email" type="email" label="E-mail" value="E-mail" />
+            <FieldUserContact>
+              <Input name="email" type="email" label="E-mail" value="E-mail" />
 
-            <Input name="whatsapp" type="tel" label="Whatsapp" value="123" />
+              <Input name="whatsapp" type="tel" label="Whatsapp" value="123" />
+            </FieldUserContact>
 
             <Textarea name="bio" label="Biografia" value="Biografia" />
           </fieldset>
 
           <fieldset>
             <legend>Sobre a aula</legend>
-            <Select
-              name="subject"
-              label="Matéria"
-              optionTextDefault="Selecione uma matéria"
-              value={subject}
-              options={[
-                { value: 'Artes', label: 'Artes' },
-                { value: 'Biologia', label: 'Biologia' },
-                { value: 'Educação Física', label: 'Educação Física' },
-                { value: 'Filosofia', label: 'Filosofia' },
-                { value: 'Física', label: 'Física' },
-                { value: 'Informática', label: 'Informática' },
-                { value: 'História', label: 'História' },
-                { value: 'Matemática', label: 'Matemática' },
-                { value: 'Português', label: 'Português' },
-                { value: 'Química', label: 'Química' },
-                { value: 'Sociologia', label: 'Sociologia' },
-              ]}
-              onChange={(e) => {
-                setSubject(e.target.value);
-              }}
-            />
+            <FieldAboutClass>
+              <Select
+                name="subject"
+                label="Matéria"
+                optionTextDefault="Selecione uma matéria"
+                value={subject}
+                options={[
+                  { value: 'Artes', label: 'Artes' },
+                  { value: 'Biologia', label: 'Biologia' },
+                  { value: 'Educação Física', label: 'Educação Física' },
+                  { value: 'Filosofia', label: 'Filosofia' },
+                  { value: 'Física', label: 'Física' },
+                  { value: 'Informática', label: 'Informática' },
+                  { value: 'História', label: 'História' },
+                  { value: 'Matemática', label: 'Matemática' },
+                  { value: 'Português', label: 'Português' },
+                  { value: 'Química', label: 'Química' },
+                  { value: 'Sociologia', label: 'Sociologia' },
+                ]}
+                onChange={(e) => {
+                  setSubject(e.target.value);
+                }}
+              />
 
-            <Input type="number" name="price" label="Preço" value="100" />
+              <Input type="number" name="price" label="Preço" value="100" />
+            </FieldAboutClass>
           </fieldset>
 
           <fieldset>
             <legend>Horários disponíveis</legend>
 
-            <Select
-              name="week_day"
-              label="Dia da semana"
-              optionTextDefault="Selecione um dia"
-              value="0"
-              options={[
-                { value: '0', label: 'Domingo' },
-                { value: '1', label: 'Segunda-feira' },
-                { value: '2', label: 'Terça-feira' },
-                { value: '3', label: 'Quarta-feira' },
-                { value: '4', label: 'Quinta-feira' },
-                { value: '5', label: 'Sexta-feira' },
-                { value: '6', label: 'Sábado' },
-              ]}
-            />
-            <Input name="from" type="time" label="Das" />
-            <Input name="to" type="time" label="Até" />
+            <FieldSchedule>
+              <Select
+                name="week_day"
+                label="Dia da semana"
+                optionTextDefault="Selecione um dia"
+                value="0"
+                options={[
+                  { value: '0', label: 'Domingo' },
+                  { value: '1', label: 'Segunda-feira' },
+                  { value: '2', label: 'Terça-feira' },
+                  { value: '3', label: 'Quarta-feira' },
+                  { value: '4', label: 'Quinta-feira' },
+                  { value: '5', label: 'Sexta-feira' },
+                  { value: '6', label: 'Sábado' },
+                ]}
+              />
+              <Input name="from" type="time" label="Das" />
+              <Input name="to" type="time" label="Até" />
+            </FieldSchedule>
           </fieldset>
         </form>
       </FormContainer>
