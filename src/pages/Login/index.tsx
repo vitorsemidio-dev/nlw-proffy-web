@@ -88,7 +88,9 @@ const Login: React.FC = () => {
                 />
                 Lembrar-me
               </InputCheckbox>
-              <ForgotPassword href="/">Esqueci minha senha</ForgotPassword>
+              <ForgotPassword href="/forgot-password">
+                Esqueci minha senha
+              </ForgotPassword>
             </FormFooter>
 
             <ButtonForm type="submit">Entrar</ButtonForm>
