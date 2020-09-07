@@ -1,17 +1,25 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
 
-import { Container, Image, DescriptionContainer } from './styles';
+import {
+  Container,
+  Image,
+  DescriptionContainer,
+  ConfirmButton,
+} from './styles';
 
 interface BackgroundFullImageProps {
   title?: string;
   description: string;
   buttonText: string;
+  redirectRouter?: string;
 }
 
 const BackgroundFullImage: React.FC<BackgroundFullImageProps> = ({
   title,
   description,
   buttonText,
+  redirectRouter = '',
 }) => {
   return (
     <Container>
@@ -20,7 +28,7 @@ const BackgroundFullImage: React.FC<BackgroundFullImageProps> = ({
           <h1>{title}</h1>
           <h2>{description}</h2>
 
-          <button type="button">{buttonText}</button>
+          <ConfirmButton to={redirectRouter}>{buttonText}</ConfirmButton>
         </DescriptionContainer>
       </Image>
     </Container>
