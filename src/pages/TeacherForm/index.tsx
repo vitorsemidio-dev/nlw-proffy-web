@@ -186,8 +186,9 @@ const TeacherForm: React.FC = () => {
                   label="Dia da semana"
                   optionTextDefault="Selecione um dia"
                   value={scheduleItem.week_day}
-                  onChange={(e) =>
-                    setScheduleItemValue(index, 'week_day', e.target.value)}
+                  onChange={(e) => {
+                    setScheduleItemValue(index, 'week_day', e.target.value);
+                  }}
                   options={[
                     { value: '0', label: 'Domingo' },
                     { value: '1', label: 'Segunda-feira' },
