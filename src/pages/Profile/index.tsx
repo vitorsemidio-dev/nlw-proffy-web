@@ -18,6 +18,7 @@ import {
   BackgroundImage,
   UserInfoContainer,
   FormContainer,
+  ButtonAddNewSchedule,
   FieldAboutClass,
   FieldUser,
   FieldUserContact,
@@ -113,7 +114,12 @@ const Profile: React.FC = () => {
           </fieldset>
 
           <fieldset>
-            <legend>Horários disponíveis</legend>
+            <legend>
+              Horários disponíveis
+              <ButtonAddNewSchedule type="button">
+                + Novo horário
+              </ButtonAddNewSchedule>
+            </legend>
 
             <FieldSchedule>
               <Select
