@@ -1,6 +1,8 @@
 import React, { useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
+import Input from '../../components/Input';
+
 import logoImg from '../../assets/images/logo.svg';
 import backIcon from '../../assets/images/icons/back.svg';
 import cameraIcon from '../../assets/images/icons/camera.svg';
@@ -52,7 +54,21 @@ const Profile: React.FC = () => {
         </BackgroundImage>
       </SectionInfo>
 
-      <FormContainer>Form</FormContainer>
+      <FormContainer>
+        <form>
+          <fieldset>
+            <legend>Seus Dados</legend>
+
+            <Input name="name" label="Nome" value="Nome" />
+
+            <Input name="lastname" label="Sobrenome" value="Sobrenome" />
+
+            <Input name="email" type="email" label="E-mail" value="E-mail" />
+
+            <Input name="whatsapp" type="tel" label="Whatsapp" value="123" />
+          </fieldset>
+        </form>
+      </FormContainer>
     </Container>
   );
 };

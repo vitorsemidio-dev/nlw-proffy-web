@@ -136,4 +136,16 @@ export const AvatarInput = styled.div`
   }
 `;
 
-export const FormContainer = styled.main``;
+export const FormContainer = styled.main`
+  background: var(--color-box-base);
+  width: 100%;
+  max-width: 74rem;
+  border-radius: 0.8rem;
+  margin: -3.2rem auto 3.2rem;
+  padding-top: 6.4rem;
+
+  fieldset {
+    border: 0;
+    padding: 0 6.4rem;
+  }
+`;
