@@ -10,6 +10,7 @@ import Landing from './pages/Landing';
 import TeacherForm from './pages/TeacherForm';
 import TeacherList from './pages/TeacherList';
 import Success from './pages/Success';
+import SuccessUpdate from './pages/SuccessUpdate';
 
 const Routes: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const Routes: React.FC = () => {
         <Route path="/study" component={TeacherList} />
         <Route path="/give-classes" component={TeacherForm} />
         <Route path="/success" component={Success} />
+        <Route path="/success-update" component={SuccessUpdate} />
       </Switch>
     </BrowserRouter>
   );
