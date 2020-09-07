@@ -26,7 +26,7 @@ const ResetPassword: React.FC = () => {
         })
         .then(() => {
           console.log('sucesso');
-          history.push('/login');
+          history.push('/success-reset-password');
         })
         .catch((_err) => {
           console.error('fail to reset');

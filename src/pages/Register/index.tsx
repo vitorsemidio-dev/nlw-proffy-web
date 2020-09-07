@@ -28,7 +28,7 @@ const Register: React.FC = () => {
         })
         .then(() => {
           console.log('sucesso');
-          history.push('/login');
+          history.push('/success-register');
         })
         .catch((_err) => {
           console.error('fail to create user');
