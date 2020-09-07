@@ -1,5 +1,7 @@
 import React from 'react';
 
+import checkIcon from '../../assets/images/icons/check.svg';
+
 import {
   Container,
   Image,
@@ -24,6 +26,7 @@ const BackgroundFullImage: React.FC<BackgroundFullImageProps> = ({
     <Container>
       <Image>
         <DescriptionContainer>
+          <img src={checkIcon} alt="Check" />
           <h1>{title}</h1>
           <h2>{description}</h2>
 

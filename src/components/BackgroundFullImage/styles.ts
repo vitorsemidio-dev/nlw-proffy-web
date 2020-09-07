@@ -19,6 +19,8 @@ export const DescriptionContainer = styled.div`
   align-items: center;
 
   h1 {
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
     font: 700 5.4rem Archivo;
     line-height: 4.2rem;
     color: var(--color-title-in-primary);
