@@ -39,7 +39,7 @@ const Landing: React.FC = () => {
     <>
       <HeaderContainer>
         <HeaderContent>
-          <ProfileInfoContainer>
+          <ProfileInfoContainer to="/profile">
             <AvatarImage src="https://api.adorable.io/avatars/48/abott@adorable.png" />
             <UserName>Vitor Emidio</UserName>
           </ProfileInfoContainer>

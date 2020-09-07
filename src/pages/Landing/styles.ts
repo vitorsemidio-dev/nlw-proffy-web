@@ -11,9 +11,10 @@ export const HeaderContainer = styled.div`
   background-color: rgba(255, 255, 255, 0.1);
 `;
 
-export const ProfileInfoContainer = styled.div`
+export const ProfileInfoContainer = styled(Link)`
   display: flex;
   align-items: center;
+  text-decoration: none;
 `;
 
 export const HeaderContent = styled.header`
@@ -45,7 +46,7 @@ export const UserName = styled.strong`
 
 export const LogoutButton = styled(Link)`
   padding: 0.4rem;
-  background-color: var(--color-primary-darker);
+  background-color: var(--color-primary-dark);
   width: 4rem;
   height: 4rem;
   border: 0;
@@ -58,7 +59,7 @@ export const LogoutButton = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary-darker);
   }
 `;
 
