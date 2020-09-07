@@ -9,6 +9,9 @@ import ResetPassword from './pages/ResetPassword';
 import Landing from './pages/Landing';
 import TeacherForm from './pages/TeacherForm';
 import TeacherList from './pages/TeacherList';
+import SuccessResetPassword from './pages/SuccessResetPassword';
+import SuccessUpdate from './pages/SuccessUpdate';
+import SuccessRegister from './pages/SuccessRegister';
 
 const Routes: React.FC = () => {
   return (
@@ -21,6 +24,12 @@ const Routes: React.FC = () => {
         <Route path="/forgot-password" component={ForgotPassword} />
         <Route path="/study" component={TeacherList} />
         <Route path="/give-classes" component={TeacherForm} />
+        <Route
+          path="/success-reset-password"
+          component={SuccessResetPassword}
+        />
+        <Route path="/success-update" component={SuccessUpdate} />
+        <Route path="/success-register" component={SuccessRegister} />
       </Switch>
     </BrowserRouter>
   );
