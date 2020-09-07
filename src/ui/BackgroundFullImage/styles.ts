@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import backgroundImage from '../../assets/images/Background.png';
+import backgroundImage from '../../assets/images/Background.svg';
 
 export const Container = styled.div`
   background-color: #8257e5;
@@ -22,7 +22,8 @@ export const DescriptionContainer = styled.div`
     margin-top: 4rem;
     margin-bottom: 2.4rem;
     font: 700 5.4rem Archivo;
-    line-height: 4.2rem;
+    line-height: 5.2rem;
+    text-align: center;
     color: var(--color-title-in-primary);
   }
 
