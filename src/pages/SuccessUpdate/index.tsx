@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BackgroundFullImage from '../../components/BackgroundFullImage';
+import BackgroundFullImage from '../../ui/BackgroundFullImage';
 
 const SuccessUpdate: React.FC = () => {
   return (

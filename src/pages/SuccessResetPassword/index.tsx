@@ -1,8 +1,8 @@
 import React from 'react';
 
-import BackgroundFullImage from '../../components/BackgroundFullImage';
+import BackgroundFullImage from '../../ui/BackgroundFullImage';
 
-const Success: React.FC = () => {
+const SuccessResetPassword: React.FC = () => {
   return (
     <BackgroundFullImage
       title="Redefinição enviada!"
@@ -13,4 +13,4 @@ const Success: React.FC = () => {
   );
 };
 
-export default Success;
+export default SuccessResetPassword;
