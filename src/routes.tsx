@@ -11,6 +11,7 @@ import TeacherForm from './pages/TeacherForm';
 import TeacherList from './pages/TeacherList';
 import SuccessResetPassword from './pages/SuccessResetPassword';
 import SuccessUpdate from './pages/SuccessUpdate';
+import SuccessRegister from './pages/SuccessRegister';
 
 const Routes: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const Routes: React.FC = () => {
           component={SuccessResetPassword}
         />
         <Route path="/success-update" component={SuccessUpdate} />
+        <Route path="/success-register" component={SuccessRegister} />
       </Switch>
     </BrowserRouter>
   );
