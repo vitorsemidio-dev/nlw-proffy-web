@@ -8,6 +8,7 @@ import Select from '../../components/Select';
 import logoImg from '../../assets/images/logo.svg';
 import backIcon from '../../assets/images/icons/back.svg';
 import cameraIcon from '../../assets/images/icons/camera.svg';
+import warningIcon from '../../assets/images/icons/warning.svg';
 
 import {
   Container,
@@ -23,6 +24,7 @@ import {
   FieldUser,
   FieldUserContact,
   FieldSchedule,
+  Footer,
 } from './styles';
 
 const Profile: React.FC = () => {
@@ -141,6 +143,16 @@ const Profile: React.FC = () => {
               <Input name="to" type="time" label="Até" />
             </FieldSchedule>
           </fieldset>
+
+          <Footer>
+            <p>
+              <img src={warningIcon} alt="Aviso importante" />
+              Importante! <br />
+              Preencha todos os dados
+            </p>
+
+            <button type="submit">Salvar cadastro</button>
+          </Footer>
         </form>
       </FormContainer>
     </Container>
