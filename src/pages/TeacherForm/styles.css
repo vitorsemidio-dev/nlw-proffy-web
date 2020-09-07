@@ -22,7 +22,7 @@
   padding: 0 2.4rem;
 }
 
-#page-teacher-form main fieldset .input-block + .textarea-block, 
+#page-teacher-form main fieldset .input-block + .textarea-block,
 #page-teacher-form main fieldset .select-block + .input-block {
   margin-top: 1.4rem;
 }
@@ -77,7 +77,7 @@
 }
 
 #page-teacher-form main footer p img {
-  margin-right: 2rem;;
+  margin-right: 2rem;
 }
 
 #page-teacher-form main footer button {

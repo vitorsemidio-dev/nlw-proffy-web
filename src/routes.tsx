@@ -12,6 +12,7 @@ import TeacherList from './pages/TeacherList';
 import SuccessResetPassword from './pages/SuccessResetPassword';
 import SuccessUpdate from './pages/SuccessUpdate';
 import SuccessRegister from './pages/SuccessRegister';
+import Profile from './pages/Profile';
 
 const Routes: React.FC = () => {
   return (
@@ -30,6 +31,7 @@ const Routes: React.FC = () => {
         />
         <Route path="/success-update" component={SuccessUpdate} />
         <Route path="/success-register" component={SuccessRegister} />
+        <Route path="/profile" component={Profile} />
       </Switch>
     </BrowserRouter>
   );
