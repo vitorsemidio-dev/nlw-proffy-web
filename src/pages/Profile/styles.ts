@@ -169,24 +169,46 @@ export const FieldAboutClass = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-column-gap: 3.2rem;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.2rem;
+  }
 `;
 
 export const FieldUser = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3.2rem;
+  margin-bottom: 2.4rem;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
 `;
 
 export const FieldUserContact = styled.div`
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-column-gap: 3.2rem;
+  margin-bottom: 2.4rem;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
 `;
 
 export const FieldSchedule = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-column-gap: 3.2rem;
+  margin-bottom: 2.4rem;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.2rem;
+    margin-bottom: 0;
+  }
 `;
 
 export const ButtonAddNewSchedule = styled.button`
