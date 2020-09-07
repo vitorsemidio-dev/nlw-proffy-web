@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import logoutIcon from '../../assets/images/icons/logout.svg';
+
 export const HeaderContainer = styled.div`
   width: 100%;
   position: fixed;
@@ -38,9 +40,22 @@ export const UserName = styled.strong`
 export const LogoutButton = styled.button`
   padding: 0.4rem;
   background-color: var(--color-primary-darker);
-  img {
-    width: 1.6rem;
-    height: 1.6rem;
-    color: var(--color-text-in-primary);
-  }
+  width: 4rem;
+  height: 4rem;
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+`;
+
+export const LogoutIcon = styled.img.attrs({
+  src: logoutIcon,
+  alt: 'Logout',
+})`
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--color-text-in-primary);
 `;
