@@ -40,10 +40,10 @@ const Landing: React.FC = () => {
       <HeaderContainer>
         <HeaderContent>
           <ProfileInfoContainer>
-            <AvatarImage src="https://thispersondoesnotexist.com/image" />
+            <AvatarImage src="https://api.adorable.io/avatars/48/abott@adorable.png" />
             <UserName>Vitor Emidio</UserName>
           </ProfileInfoContainer>
-          <LogoutButton>
+          <LogoutButton to="/login">
             <LogoutIcon />
           </LogoutButton>
         </HeaderContent>

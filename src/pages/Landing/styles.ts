@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import logoutIcon from '../../assets/images/icons/logout.svg';
 
@@ -7,7 +8,7 @@ export const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
   height: 6.4rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 `;
 
 export const ProfileInfoContainer = styled.div`
@@ -37,7 +38,7 @@ export const UserName = styled.strong`
   color: var(--color-text-in-primary);
 `;
 
-export const LogoutButton = styled.button`
+export const LogoutButton = styled(Link)`
   padding: 0.4rem;
   background-color: var(--color-primary-darker);
   width: 4rem;
@@ -49,6 +50,11 @@ export const LogoutButton = styled.button`
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+  }
 `;
 
 export const LogoutIcon = styled.img.attrs({
