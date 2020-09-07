@@ -12,9 +12,8 @@ export const Container = styled.div`
 export const HeaderContainer = styled.div`
   width: 100%;
   height: 6.4rem;
-  position: fixed;
+  position: absolute;
   top: 0;
-  /* background-color: rgba(255, 255, 255, 0.1); */
   background-color: transparent;
 `;
 
@@ -48,7 +47,7 @@ export const HeaderContent = styled.header`
 
 export const SectionInfo = styled.section`
   width: 100%;
-  height: 64rem;
+  height: 48rem;
   padding: 6.4rem;
   background-color: #8257e5;
   display: block;
