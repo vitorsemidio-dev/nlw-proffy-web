@@ -5,20 +5,42 @@ export const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
   height: 6.4rem;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+`;
+
+export const ProfileInfoContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const HeaderContent = styled.header`
   margin: 0 auto;
   max-width: 110rem;
-  background: #88d5af;
+  background: transparent;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
-export const ProfileInfoContainer = styled.div``;
+export const AvatarImage = styled.img`
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  margin-right: 1.6rem;
+`;
 
-export const AvatarImage = styled.img``;
+export const UserName = styled.strong`
+  font: 500 1.6rem Poppins;
+  color: var(--color-text-in-primary);
+`;
 
-export const UserName = styled.strong``;
-
-export const Logout = styled.button``;
+export const LogoutButton = styled.button`
+  padding: 0.4rem;
+  background-color: var(--color-primary-darker);
+  img {
+    width: 1.6rem;
+    height: 1.6rem;
+    color: var(--color-text-in-primary);
+  }
+`;

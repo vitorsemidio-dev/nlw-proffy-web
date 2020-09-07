@@ -7,6 +7,7 @@ import logoImg from '../../assets/images/logo.svg';
 import landingImg from '../../assets/images/landing.svg';
 
 import studyIcon from '../../assets/images/icons/study.svg';
+import logoutIcon from '../../assets/images/icons/logout.svg';
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg';
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
 
@@ -17,7 +18,7 @@ import {
   ProfileInfoContainer,
   AvatarImage,
   UserName,
-  Logout,
+  LogoutButton,
 } from './styles';
 
 interface Connection {
@@ -39,10 +40,12 @@ const Landing: React.FC = () => {
       <HeaderContainer>
         <HeaderContent>
           <ProfileInfoContainer>
-            <AvatarImage />
-            <UserName>Usuario</UserName>
+            <AvatarImage src="https://thispersondoesnotexist.com/image" />
+            <UserName>Vitor Emidio</UserName>
           </ProfileInfoContainer>
-          <Logout />
+          <LogoutButton>
+            <img src={logoutIcon} alt="Logout" />
+          </LogoutButton>
         </HeaderContent>
       </HeaderContainer>
       <div id="page-landing">
