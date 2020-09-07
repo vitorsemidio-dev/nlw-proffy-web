@@ -10,25 +10,28 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const DescriptionContainer = styled.div`
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
-    font: 700 3.6rem Archivo;
+    font: 700 5.4rem Archivo;
     line-height: 4.2rem;
     color: var(--color-title-in-primary);
   }
 
   h2 {
     font-weight: 500;
-    font-size: 3.2rem;
-    line-height: 4.6rem;
+    font-size: 1.6rem;
     margin-top: 0.8rem;
     color: var(--color-text-in-primary);
-    max-width: 30rem;
+    text-align: center;
+    max-width: 50rem;
   }
-`;
-
-export const DescriptionContainer = styled.div`
-  max-width: 40rem;
 `;
 
 export const Image = styled.div`
@@ -47,7 +50,6 @@ export const Image = styled.div`
 `;
 
 export const ConfirmButton = styled(Link)`
-  /* width:  */
   height: 5.6rem;
   background: var(--color-secondary);
   color: var(--color-button-text);
@@ -61,4 +63,5 @@ export const ConfirmButton = styled(Link)`
   text-decoration: none;
   transition: background-color 0.2s;
   margin-top: 3.2rem;
+  padding: 2.4rem;
 `;
