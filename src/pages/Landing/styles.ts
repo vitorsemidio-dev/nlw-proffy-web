@@ -5,7 +5,7 @@ import logoutIcon from '../../assets/images/icons/logout.svg';
 
 export const HeaderContainer = styled.div`
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 6.4rem;
   background-color: rgba(255, 255, 255, 0.1);
