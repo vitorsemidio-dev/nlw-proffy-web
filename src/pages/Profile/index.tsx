@@ -1,7 +1,9 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Input from '../../components/Input';
+import Textarea from '../../components/Textarea';
+import Select from '../../components/Select';
 
 import logoImg from '../../assets/images/logo.svg';
 import backIcon from '../../assets/images/icons/back.svg';
@@ -19,6 +21,8 @@ import {
 } from './styles';
 
 const Profile: React.FC = () => {
+  const [subject, setSubject] = useState('');
+
   const handleAvatarChange = useCallback(() => {
     console.log('handleAvatarChange');
   }, []);
@@ -66,6 +70,58 @@ const Profile: React.FC = () => {
             <Input name="email" type="email" label="E-mail" value="E-mail" />
 
             <Input name="whatsapp" type="tel" label="Whatsapp" value="123" />
+
+            <Textarea name="bio" label="Biografia" value="Biografia" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Sobre a aula</legend>
+            <Select
+              name="subject"
+              label="Matéria"
+              optionTextDefault="Selecione uma matéria"
+              value={subject}
+              options={[
+                { value: 'Artes', label: 'Artes' },
+                { value: 'Biologia', label: 'Biologia' },
+                { value: 'Educação Física', label: 'Educação Física' },
+                { value: 'Filosofia', label: 'Filosofia' },
+                { value: 'Física', label: 'Física' },
+                { value: 'Informática', label: 'Informática' },
+                { value: 'História', label: 'História' },
+                { value: 'Matemática', label: 'Matemática' },
+                { value: 'Português', label: 'Português' },
+                { value: 'Química', label: 'Química' },
+                { value: 'Sociologia', label: 'Sociologia' },
+              ]}
+              onChange={(e) => {
+                setSubject(e.target.value);
+              }}
+            />
+
+            <Input type="number" name="price" label="Preço" value="100" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Horários disponíveis</legend>
+
+            <Select
+              name="week_day"
+              label="Dia da semana"
+              optionTextDefault="Selecione um dia"
+              value="0"
+              options={[
+                { value: '0', label: 'Domingo' },
+                { value: '1', label: 'Segunda-feira' },
+                { value: '2', label: 'Terça-feira' },
+                { value: '3', label: 'Quarta-feira' },
+                { value: '4', label: 'Quinta-feira' },
+                { value: '5', label: 'Sexta-feira' },
+                { value: '6', label: 'Sábado' },
+              ]}
+            />
+            <Input name="from" type="time" label="Das" />
+            <Input name="to" type="time" label="Até" />
           </fieldset>
         </form>
       </FormContainer>
