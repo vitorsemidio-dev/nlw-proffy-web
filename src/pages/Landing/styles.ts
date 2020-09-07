@@ -24,6 +24,11 @@ export const HeaderContent = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1100px) {
+    width: 90vw;
+    max-width: 70rem;
+  }
 `;
 
 export const AvatarImage = styled.img`
