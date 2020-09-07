@@ -63,6 +63,24 @@ export const BackgroundImage = styled.div`
   background-size: cover;
 `;
 
+export const UserInfoContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font: 700 3.6rem Archivo;
+    color: var(--color-title-in-primary);
+    margin: 3.2rem 0 1.6rem;
+  }
+
+  h2 {
+    color: var(--color-text-in-primary);
+    font: 500 2.4rem Poppins;
+  }
+`;
+
 export const AvatarInput = styled.div`
   margin-bottom: 32px;
   position: relative;
