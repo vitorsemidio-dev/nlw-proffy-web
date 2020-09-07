@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import backgroundImage from '../../assets/images/success-background.svg';
+
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -9,6 +11,7 @@ export const Container = styled.div`
 
 export const HeaderContainer = styled.div`
   width: 100%;
+  height: 6.4rem;
   position: fixed;
   top: 0;
   /* background-color: rgba(255, 255, 255, 0.1); */
@@ -17,7 +20,7 @@ export const HeaderContainer = styled.div`
 
 export const HeaderContent = styled.header`
   max-width: 1100px;
-  height: 6.4rem;
+  height: 100%;
   margin: 0 auto;
 
   display: flex;
@@ -46,8 +49,18 @@ export const HeaderContent = styled.header`
 export const SectionInfo = styled.section`
   width: 100%;
   height: 64rem;
+  padding: 6.4rem;
   background-color: #8257e5;
   display: block;
+`;
+
+export const BackgroundImage = styled.div`
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  background: url(${backgroundImage}) no-repeat center;
+  background-size: cover;
 `;
 
 export const AvatarInput = styled.div`

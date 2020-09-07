@@ -11,6 +11,7 @@ import {
   HeaderContent,
   SectionInfo,
   AvatarInput,
+  BackgroundImage,
   FormContainer,
 } from './styles';
 
@@ -31,17 +32,19 @@ const Profile: React.FC = () => {
         </HeaderContent>
       </HeaderContainer>
       <SectionInfo>
-        <AvatarInput>
-          <img
-            src="https://api.adorable.io/avatars/48/abott@adorable.png"
-            alt="Avatar"
-          />
+        <BackgroundImage>
+          <AvatarInput>
+            <img
+              src="https://api.adorable.io/avatars/48/abott@adorable.png"
+              alt="Avatar"
+            />
 
-          <label htmlFor="avatar">
-            <img src={cameraIcon} alt="Camera Input" />
-            <input type="file" id="avatar" onChange={handleAvatarChange} />
-          </label>
-        </AvatarInput>
+            <label htmlFor="avatar">
+              <img src={cameraIcon} alt="Camera Input" />
+              <input type="file" id="avatar" onChange={handleAvatarChange} />
+            </label>
+          </AvatarInput>
+        </BackgroundImage>
       </SectionInfo>
 
       <FormContainer>Form</FormContainer>
